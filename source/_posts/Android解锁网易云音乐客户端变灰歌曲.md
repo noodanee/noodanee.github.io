@@ -1,7 +1,7 @@
 ---
 title: Android解锁网易云音乐客户端变灰歌曲
 date: 2019-05-02 11:26:32
-tags:
+tags: Android
 ---
 ### 发现
 我在github上发现一个很有意思的项目，它可以解锁网易云音乐变灰歌曲[UnblockNeteaseMusic](https://github.com/nondanee/UnblockNeteaseMusic)，它的原理是通过代理替换变灰歌曲的链接来实现解锁。
