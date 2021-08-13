@@ -1,24 +1,41 @@
-name: Build and Deploy
-on: [push]
+name: Hexo Deploy
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+      - name: Checkout source
+        uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          ref: master
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm install
-          npm run build
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+
+      - name: Setup Hexo
         env:
-          CI: false
+          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.email "840867182@qq.com"
+          git config --global user.name "noodanee"
+          npm install hexo-cli -g
+          npm install
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
+      - name: Deploy
+        run: |
+          npx hexo clean
+          npx hexo g -d
