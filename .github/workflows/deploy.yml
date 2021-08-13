@@ -37,5 +37,4 @@ jobs:
 
       - name: Deploy
         run: |
-          npx hexo clean
-          npx hexo g -d
+          npm run deploy
