@@ -3,8 +3,6 @@ title: 写给前端工程师的Golang入门教程 —— Hello World
 date: 2021-08-12 00:00:00
 tags: Golang
 ---
-# 写给前端工程师的Golang入门教程 —— Hello World
-
 > Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
 ## 环境搭建
