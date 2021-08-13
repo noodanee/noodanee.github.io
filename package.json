@@ -7,7 +7,8 @@
   },
   "scripts": {
     "build": "npx hexo g",
-    "dev": "npx hexo s -w"
+    "dev": "npx hexo s -w",
+    "deploy": "npx hexo g -d"
   },
   "dependencies": {
     "hexo": "^5.4.0",
