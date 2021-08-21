@@ -44,7 +44,7 @@ const a = 10
 
 ### 条件语句
 
-`JavaScript`的条件分支语法继承自`C`语言
+`JavaScript`条件分支语法继承自`C`语言
 
 ```javascript
 let a = 10
