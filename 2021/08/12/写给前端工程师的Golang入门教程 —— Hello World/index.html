@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"noodanee.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.  环境搭建我们在前端搭建环境时会先安装Node.js，安装Node.js有几种方法  下载安装包或二进制文件 使用系统包管理工具安装 使用版本管理工具安装  对应我们也有这几">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写给前端工程师的Golang入门教程 —— Hello World">
+<meta property="og:url" content="https://noodanee.com/2021/08/12/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20Hello%20World/index.html">
+<meta property="og:site_name" content="Ruby Rose">
+<meta property="og:description" content="Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.  环境搭建我们在前端搭建环境时会先安装Node.js，安装Node.js有几种方法  下载安装包或二进制文件 使用系统包管理工具安装 使用版本管理工具安装  对应我们也有这几">
+<meta property="og:locale">
+<meta property="og:image" content="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg">
+<meta property="article:published_time" content="2021-08-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-25T11:10:20.719Z">
+<meta property="article:author" content="Ruby Rose">
+<meta property="article:tag" content="Golang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg">
+
+<link rel="canonical" href="https://noodanee.com/2021/08/12/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20Hello%20World/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>写给前端工程师的Golang入门教程 —— Hello World | Ruby Rose</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ruby Rose</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Talk is cheap. Show me the code.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2021/08/12/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20Hello%20World/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          写给前端工程师的Golang入门教程 —— Hello World
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-08-12 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-12T00:00:00+00:00">2021-08-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-25 11:10:20" itemprop="dateModified" datetime="2021-08-25T11:10:20+00:00">2021-08-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
+</blockquote>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>我们在前端搭建环境时会先安装<a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js</a>，安装Node.js有几种方法</p>
+<ol>
+<li>下载安装包或二进制文件</li>
+<li>使用系统包管理工具安装</li>
+<li>使用版本管理工具安装</li>
+</ol>
+<p>对应我们也有这几种方法可以安装Golang</p>
+<h3 id="下载安装包或二进制文件"><a href="#下载安装包或二进制文件" class="headerlink" title="下载安装包或二进制文件"></a>下载安装包或二进制文件</h3><p>我们可以在<a target="_blank" rel="noopener" href="https://golang.org/dl/">Golang下载页</a>找到不同系统对应的安装包或二进制文件，这里不再赘述。<br>这个方案版本升级不太方便，需要手动下载最新版本覆盖旧版本，这里更推荐下面的方案。</p>
+<h3 id="使用系统包管理工具安装"><a href="#使用系统包管理工具安装" class="headerlink" title="使用系统包管理工具安装"></a>使用系统包管理工具安装</h3><p>在不同的系统都有自己的包管理工具，可以让我们很好的对应用进行管理</p>
+<p>在Windows下，目前较好用的包管理工具是<a target="_blank" rel="noopener" href="https://chocolatey.org/">Chocolatey</a>，使用Chocolatey安装：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install golang</span><br></pre></td></tr></table></figure>
+
+<p>在Mac下，最好用的包管理工具当然是<a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>，使用Homebrew安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install golang</span><br></pre></td></tr></table></figure>
+
+<p>安装命令执行完成后输入命令 <code>go version</code>  , 控制台打印golang版本号则代表安装成功。</p>
+<h3 id="Golang版本管理工具"><a href="#Golang版本管理工具" class="headerlink" title="Golang版本管理工具"></a>Golang版本管理工具</h3><p>在Node.js中，有<a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">nvm</a>, 对应在Golang社区也有<a target="_blank" rel="noopener" href="https://github.com/moovweb/gvm">gvm</a></p>
+<p>可以用 <code>gvm install</code> 命令显示可以下载和编译可用的 Golang 版本</p>
+<p>安装特定的 go 版本只需运行 <code>gvm install &lt;version&gt;</code>命令，其中 <code>&lt;version&gt;</code> 是表示要安装的版本。假设你正在处理一个使用 go 1.16.7 版本的项目，你就可以使用 <code>gvm install go1.16.7</code> 命令来安装这个版本。</p>
+<p>使用 <code>gvm use </code>  命令来切换到新安装的 go 1.16.7 版本。如果不想每次敲 gvm use 指令来切换版本，你可以加上 –default 参数来指定默认使用这个版本。</p>
+<p>这里还要介绍另一款工具是<a target="_blank" rel="noopener" href="https://github.com/voidint/g">g</a>, 它与Node.js的<a target="_blank" rel="noopener" href="https://github.com/tj/n">n</a>也是一样的用法</p>
+<p><code>g ls-remote </code>  查询可供安装的所有go版本</p>
+<p><code>g install &lt;version&gt;</code>  安装目标go版本</p>
+<p><code>g ls</code>  查询已安装的go版本</p>
+<p><code>g use &lt;version&gt;</code>  切换到另一个已安装的go版本</p>
+<p><code>g uninstall &lt;version&gt;</code>  卸载一个已安装的go版本</p>
+<h3 id="国内镜像配置"><a href="#国内镜像配置" class="headerlink" title="国内镜像配置"></a>国内镜像配置</h3><p>在使用npm安装项目依赖的时候，我们会设置npm的源来加快安装速度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>同样go的中央仓库也在国外，我们需要设置go的国内镜像，可以使用<code>goproxy.cn</code>  或 <code>goproxy.io</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go env -w GO111MODULE=on</span><br><span class="line">$ go env -w GOPROXY=https://goproxy.cn,direct</span><br></pre></td></tr></table></figure>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>创建一个main.go文件</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;hello world!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>控制台运行 <code>go run main.go</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go run main.go</span><br><span class="line">hello world!</span><br></pre></td></tr></table></figure>
+
+<p>至此，我们第一个Hello World程序就完成啦！是不是很简单呢？</p>
+<p>欢迎关注我的公众号“<strong>野生程序员的修炼</strong>”，原创技术文章第一时间推送。</p>
+<center>
+    <img src="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg" style="width: 100px;">
+</center>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Golang/" rel="tag"># Golang</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/02/Android%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%98%E7%81%B0%E6%AD%8C%E6%9B%B2/" rel="prev" title="Android解锁网易云音乐客户端变灰歌曲">
+      <i class="fa fa-chevron-left"></i> Android解锁网易云音乐客户端变灰歌曲
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/14/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/" rel="next" title="写给前端工程师的Golang入门教程 —— 依赖管理">
+      写给前端工程师的Golang入门教程 —— 依赖管理 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85%E6%88%96%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">下载安装包或二进制文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">使用系统包管理工具安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Golang%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">1.3.</span> <span class="nav-text">Golang版本管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE"><span class="nav-number">1.4.</span> <span class="nav-text">国内镜像配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">2.</span> <span class="nav-text">Hello World</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ruby Rose</p>
+  <div class="site-description" itemprop="description">Talk is cheap. Show me the code.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ruby Rose</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

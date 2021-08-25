@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"noodanee.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Talk is cheap. Show me the code.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ruby Rose">
+<meta property="og:url" content="https://noodanee.com/index.html">
+<meta property="og:site_name" content="Ruby Rose">
+<meta property="og:description" content="Talk is cheap. Show me the code.">
+<meta property="og:locale">
+<meta property="article:author" content="Ruby Rose">
+<meta property="article:tag" content="Ruby Rose">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://noodanee.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Ruby Rose</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ruby Rose</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Talk is cheap. Show me the code.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2021/08/25/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/25/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">写给前端工程师的Golang入门教程 —— 内置类型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-08-25 00:00:00 / Modified: 11:10:20" itemprop="dateCreated datePublished" datetime="2021-08-25T00:00:00+00:00">2021-08-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><code>JavaScript</code>是一门弱类型的语言，对于数据类型定义比较宽泛，<code>Golang</code>是一门强类型的语言，对于的类型定义比较细致。</p>
+<h3 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>长度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bool</code></td>
+<td>1</td>
+<td>对应JavaScript的Boolean</td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td></td>
+<td>对应JavaScript的String</td>
+</tr>
+<tr>
+<td><code>(u)int</code></td>
+<td>4/8</td>
+<td>32或64位</td>
+</tr>
+<tr>
+<td><code>(u)int8</code></td>
+<td>1</td>
+<td>-128 ~ 127, 0 ~ 255</td>
+</tr>
+<tr>
+<td><code>(u)int16</code></td>
+<td>2</td>
+<td>-32768 ~ 32767, 0 ~ 65535</td>
+</tr>
+<tr>
+<td><code>(u)int32</code></td>
+<td>4</td>
+<td>-2147483648 ~ 2147483647, 0 ~ 4294967295</td>
+</tr>
+<tr>
+<td><code>(u)int64</code></td>
+<td>8</td>
+<td>-9223372036854775808 ~ 9223372036854775807, 0 ~ 18446744073709551615</td>
+</tr>
+<tr>
+<td><code>uintptr</code></td>
+<td>4/8</td>
+<td>存储指针的uint32或uint64整数</td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>1</td>
+<td>uint8的别名</td>
+</tr>
+<tr>
+<td><code>rune</code></td>
+<td>4</td>
+<td>int32的别名, Unicode码点</td>
+</tr>
+<tr>
+<td><code>float32</code></td>
+<td>4</td>
+<td>符合IEEE-754标准的32位浮点数</td>
+</tr>
+<tr>
+<td><code>float64</code></td>
+<td>8</td>
+<td>符合IEEE-754标准的64位浮点数</td>
+</tr>
+<tr>
+<td><code>complex64</code></td>
+<td>8</td>
+<td>具有float32实部和虚部的所有复数的集合</td>
+</tr>
+<tr>
+<td><code>complex128</code></td>
+<td>16</td>
+<td>具有float64实部和虚部的所有复数的集合</td>
+</tr>
+</tbody></table>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p><code>JavaScript</code>的数组声明不用关注元素类型和数组长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p><code>Golang</code>要求声明元素类型和数组长度</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">3</span>]<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Golang</code>数组长度是声明在类型前面的，并且也可以让编译器计算</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [...]<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p><code>Golang</code>的数组声明需要事先定义数组长度，看起来不像<code>JavaScript</code>中的数组那么好用，实际上与<code>JavaScript</code>中的数组对等的应该是<code>Golang</code>的切片。</p>
+<p>数组是值类型，切片是在数组上面的一个‘View’，它指向一个数组的一段连续的内存。</p>
+<p>初始化一个切片也很简单，直接去掉数组长度的声明就是切片</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = []<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在切片元素不确定的情况下，我们还可以使用<code>make</code>初始化一个切片</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">3</span>)</span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">3</span>, <span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>初始化一个长度为3的切片a；初始化一个长度为3，数组的容量为6的b。</p>
+</blockquote>
+<p><code>Golang</code>提供了一些方法操作切片</p>
+<p><code>len()</code>可以查看切片的长度<br><code>cap()</code>可以查看切片指向的数组的长度</p>
+<blockquote>
+<p>相当于<code>JavaScript</code>中的<code>Array.prototype.length</code>属性</p>
+</blockquote>
+<p><code>append()</code>可以追加元素到切片中，并且有扩容指向的数组的能力</p>
+<blockquote>
+<p>相当于<code>JavaScript</code>中的<code>push()</code></p>
+</blockquote>
+<p>还可以使用<code>[low:high]</code>切片操作</p>
+<blockquote>
+<p>相当于<code>JavaScript</code>中的<code>Array.prototype.slice()</code>方法</p>
+</blockquote>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p>Map是一种无序的Key-Value数据结构，相当于<code>JavaScript</code>中的<code>Map</code></p>
+<p>初始化Map需要声明类型</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span> &#123;</span><br><span class="line">  <span class="string">&quot;foo&quot;</span>: <span class="string">&quot;Hello&quot;</span>,</span><br><span class="line">  <span class="string">&quot;bar&quot;</span>: <span class="string">&quot;World&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用<code>make</code></p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>delete()</code>删除<code>key</code></p>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>结构体可以看作是<code>JavaScript</code>中的<code>Object</code>，不过需要事先定义字段。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">  name <span class="keyword">string</span></span><br><span class="line">  age <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = Person&#123;name: <span class="string">&quot;allen&quot;</span>, age: <span class="number">30</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = Person&#123;<span class="string">&quot;allen&quot;</span>, <span class="number">30</span>&#125;</span><br><span class="line"><span class="keyword">var</span> c = <span class="built_in">new</span>(Person)</span><br><span class="line">c.name = <span class="string">&quot;allen&quot;</span></span><br><span class="line">c.age = <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<p><code>new()</code>是<code>Golang</code>的一个内置函数，它会根据传入的类型分配一片内存空间并返回指向这片内存空间的指针。</p>
+<p>欢迎关注我的公众号“<strong>野生程序员的修炼</strong>”，原创技术文章第一时间推送。</p>
+<center>
+    <img src="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg" style="width: 100px;">
+</center>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2021/08/21/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/21/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">写给前端工程师的Golang入门教程 —— 基本语法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-08-21 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-21T00:00:00+00:00">2021-08-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-25 11:10:20" itemprop="dateModified" datetime="2021-08-25T11:10:20+00:00">2021-08-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在前端我们主要使用<code>JavaScript</code>作为主要开发语言，我们来逐一对比<code>JavaScript</code>与<code>Golang</code>的语法特性，来帮助前端工程师更快入门<code>Golang</code>。</p>
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>在<code>JavaScript</code>中，使用<code>var</code>或<code>let</code>关键字来声明变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">10</span></span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>Golang</code>中，同样使用<code>var</code>关键字声明变量</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p>由于<code>Golang</code>是一门强类型的语言，如果省略了类型声明，编译器会做类型推导，上面这种变量声明方式实际上等价于</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a <span class="keyword">int</span> = <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p>在函数中，使用<code>:=</code>符号可以更简便的声明并初始化变量</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  a := <span class="number">10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>除了变量，我们还有声明常量的需求，<code>Golang</code>和<code>JavaScript</code>常量的声明方式也是一样的</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p><code>JavaScript</code>条件分支语法继承自<code>C</code>语言</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> (a &gt; <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Golang</code>的条件分支不带小括号，支持在条件里写多个表达式，用<code>;</code>号分割，并且在条件里声明的变量只在<code>if</code>条件模块内部有效</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a := <span class="number">10</span>; a &gt; <span class="number">0</span> &#123;</span><br><span class="line">  fmt.Println(a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>条件分支中最容易忽略的是<code>switch</code>结构。</p>
+<p>在<code>JavaScript</code>中，每个<code>case</code>要使用<code>break</code>关键字终止流程</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (fruit) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">&quot;banana&quot;</span>:</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">  <span class="keyword">case</span> <span class="string">&quot;apple&quot;</span>:</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">  <span class="attr">default</span>:</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Golang</code>很人性化，每个<code>case</code>会自动<code>break</code></p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> fruit &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="string">&quot;banana&quot;</span>:</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">case</span> <span class="string">&quot;apple&quot;</span>:</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果需要顺序执行代码，还加<code>fallthrough</code>关键字</p>
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>在<code>JavaScript</code>中，循环语句有<code>while</code>、<code>do while</code>、<code>for</code>、<code>for in</code>、<code>for of</code></p>
+<p>在<code>Golang</code>中，没有那么多花里胡哨的东西，只有万能的<code>for</code></p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">  fmt.Println(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>for</code>的起始条件、递增条件、结束条件都是可选的，甚至可以不带任何条件，就表示一个死循环</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>在<code>JavaScript</code>中，函数用<code>function</code>关键字声明</p>
+<p>在<code>Golang</code>中，函数用<code>func</code>关键字声明，并且与<code>JavaScript</code>一样，函数是一等公民，支持闭包</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">createIncrementor</span><span class="params">(start <span class="keyword">int</span>)</span> <span class="title">func</span><span class="params">()</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">func</span> <span class="params">()</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	  start++</span><br><span class="line">	  <span class="keyword">return</span> start;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	inc := createIncrementor(<span class="number">5</span>);</span><br><span class="line">  </span><br><span class="line">	inc() <span class="comment">// 5</span></span><br><span class="line">	inc() <span class="comment">// 6</span></span><br><span class="line">	inc() <span class="comment">// 7</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>欢迎关注我的公众号“<strong>野生程序员的修炼</strong>”，原创技术文章第一时间推送。</p>
+<center>
+    <img src="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg" style="width: 100px;">
+</center>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2021/08/14/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/14/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">写给前端工程师的Golang入门教程 —— 依赖管理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-08-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-14T00:00:00+00:00">2021-08-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-25 11:10:20" itemprop="dateModified" datetime="2021-08-25T11:10:20+00:00">2021-08-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Node-js的依赖管理"><a href="#Node-js的依赖管理" class="headerlink" title="Node.js的依赖管理"></a>Node.js的依赖管理</h2><p>在前端，我们通常使用npm管理依赖。</p>
+<p>我们会使用<code>npm init</code>初始化一个项目，初始化完成会在当前目录下生成一个<code>package.json</code>的文件, 我们还会安装一些依赖，比如执行<code>npm install axios</code>安装<code>axios</code>http请求库，安装完成查看<code>package.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;module&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;keywords&quot;</span>: [],</span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;axios&quot;</span>: <span class="string">&quot;^0.21.1&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>package.json</code>描述了整个项目的大致情况, 包括模块名字、模块版本号、模块描述、入口文件、模块脚本配置，作者、开源协议以及依赖情况。</p>
+<p>项目下还存在一个<code>package-lock.json</code>文件, 它记录当前安装的每个依赖包的版本，</p>
+<p>在运行<code>npm install</code>的时候，<code>npm</code>会使用这些确切的版本。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">  <span class="attr">&quot;axios&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.21.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;resolved&quot;</span>: <span class="string">&quot;https://registry.npmjs.org/axios/-/axios-0.21.1.tgz&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;integrity&quot;</span>: <span class="string">&quot;sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;requires&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;follow-redirects&quot;</span>: <span class="string">&quot;^1.10.0&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;follow-redirects&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;1.14.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;resolved&quot;</span>: <span class="string">&quot;https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.1.tgz&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;integrity&quot;</span>: <span class="string">&quot;sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到软件包的版本、下载地址、用于校验依赖包的sha512值和它的依赖，这里我们发现<code>axios</code>依赖了<code>follow-redirects</code>。</p>
+<p>这些依赖安装到了项目下的<code>node_modules</code>目录。</p>
+<p><img src="https://gitee.com/noodanee/resource/raw/master/2021-8-14/1628908232918-image.png"></p>
+<h2 id="Golang的依赖管理"><a href="#Golang的依赖管理" class="headerlink" title="Golang的依赖管理"></a>Golang的依赖管理</h2><p>Golang的依赖管理方案经历了一个曲折的过程。</p>
+<p>GOPATH: 把所有的项目文件和依赖全部放在一个目录里，不同项目没办法使用不同版本的依赖，所以有了GOVENDOR。</p>
+<p>GOVENDOR: 每个项目有自己的vendor目录，项目优先到vendor目录查找依赖，其次到GOPATH目录查找。</p>
+<p>目前最新的Golang依赖管理是使用Go Modules。</p>
+<p>使用<code>go mod init &lt;module&gt;</code>的方式初始化一个go mod项目</p>
+<blockquote>
+<p><code>go mod init</code>相当于<code>npm init</code></p>
+</blockquote>
+<p>使用<code>go get &lt;module&gt;</code>的方式安装一个依赖包</p>
+<blockquote>
+<p><code>go get</code>相当于<code>npm install</code></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> go mod init github.com/noodanee/go-modules</span></span><br><span class="line">go: creating new go.mod: module go-modules</span><br><span class="line"><span class="meta">$</span><span class="bash"> go get github.com/go-resty/resty/v2</span></span><br><span class="line">go get: added github.com/go-resty/resty/v2 v2.6.0</span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line">go.mod  go.sum</span><br></pre></td></tr></table></figure>
+
+<p>我们初始化一个模块<code>github.com/noodanee/go-modules</code></p>
+<p>安装一个依赖<code>github.com/go-resty/resty/v2</code></p>
+<p>当前目录下产生两个文件<code>go.mod</code>和<code>go.sum</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module github.com/noodanee/go-modules</span><br><span class="line"></span><br><span class="line">go 1.16</span><br><span class="line"></span><br><span class="line">require github.com/go-resty/resty/v2 v2.6.0 // indirect</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>go.mod</code>记录了当前模块名，当前项目使用的Golang版本以及依赖情况。</p>
+<blockquote>
+<p><code>go.mod</code>相当于<code>package.json</code></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">github.com/go-resty/resty/v2 v2.6.0 h1:joIR5PNLM2EFqqESUjCMGXrWmXNHEU9CEiK813oKYS4=</span><br><span class="line">github.com/go-resty/resty/v2 v2.6.0/go.mod h1:PwvJS6hvaPkjtjNg9ph+VrSD92bi5Zq73w/BIH7cC3Q=</span><br><span class="line">golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 h1:4nGaVu0QrbjT/AK2PRLuQfQuh6DJve+pELhqTdAj3x0=</span><br><span class="line">golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4/go.mod h1:p54w0d4576C0XHj96bSt6lcn1PtDYWL6XObtHCRCNQM=</span><br><span class="line">golang.org/x/sys v0.0.0-20201119102817-f84b799fce68/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=</span><br><span class="line">golang.org/x/sys v0.0.0-20210330210617-4fbd30eecc44/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=</span><br><span class="line">golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod h1:bj7SfCRtBDWHUb9snDiAeCFNEtKQo2Wmx5Cou7ajbmo=</span><br><span class="line">golang.org/x/text v0.3.3/go.mod h1:5Zoc/QRtKVWzQhOtBMvqHzDpF6irO9z98xDceosuGiQ=</span><br><span class="line">golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=</span><br></pre></td></tr></table></figure>
+
+<p><code>go.sum</code>记录了依赖的版本号，像<code>package-lock.json</code>一样也有依赖的依赖的版本号，还有校验依赖包的sha512值</p>
+<blockquote>
+<p>h1:开头的字符串，表示生成checksum的算法是第一版的hash算法，即sha256。</p>
+</blockquote>
+<p>下载的依赖不像<code>Node.js</code>项目一样存放到当前<code>node_modules</code>目录，而是存放到<code>GOMODCACHE</code>目录，<code>GOMODCACHE</code>是一个go环境变量，通过<code>go env</code>可以查看<code>GOMODCACHE</code>的位置。</p>
+<p><code>cd</code>到<code>GOMODCACHE</code>指向的目录，我们发现它是按照模块名来组织依赖的。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line">cache  github.com  golang.org  google.golang.org</span><br></pre></td></tr></table></figure>
+<p><code>cd</code>到<code>github.com/go-resty/resty</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> github.com/go-resty/resty</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line">v2@v2.6.0</span><br></pre></td></tr></table></figure>
+<p>好家伙！它是按版本来存放依赖的，以<code>@</code>符号作为版本分割符，这样就解决了多版本共存的问题。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本文大致讲述了<code>Node.js</code>项目与<code>Golang</code>项目依赖管理的方式，对比了<code>Node.js</code>和<code>Golang</code>项目依赖管理的相同点和不同点。<code>Node.js</code>项目把依赖存放到项目的<code>node_modules</code>目录；<code>Golang</code>采用在项目下记录依赖，依赖文件实际存放到统一目录，这也是更通用的方式。</p>
+<p>看到这里，我相信你对Golang的依赖管理已经有了一个基本的认识。</p>
+<p>欢迎关注我的公众号“<strong>野生程序员的修炼</strong>”，原创技术文章第一时间推送。</p>
+<center>
+    <img src="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg" style="width: 100px;">
+</center>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2021/08/12/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20Hello%20World/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/12/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20Hello%20World/" class="post-title-link" itemprop="url">写给前端工程师的Golang入门教程 —— Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-08-12 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-12T00:00:00+00:00">2021-08-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-25 11:10:20" itemprop="dateModified" datetime="2021-08-25T11:10:20+00:00">2021-08-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
+</blockquote>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>我们在前端搭建环境时会先安装<a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js</a>，安装Node.js有几种方法</p>
+<ol>
+<li>下载安装包或二进制文件</li>
+<li>使用系统包管理工具安装</li>
+<li>使用版本管理工具安装</li>
+</ol>
+<p>对应我们也有这几种方法可以安装Golang</p>
+<h3 id="下载安装包或二进制文件"><a href="#下载安装包或二进制文件" class="headerlink" title="下载安装包或二进制文件"></a>下载安装包或二进制文件</h3><p>我们可以在<a target="_blank" rel="noopener" href="https://golang.org/dl/">Golang下载页</a>找到不同系统对应的安装包或二进制文件，这里不再赘述。<br>这个方案版本升级不太方便，需要手动下载最新版本覆盖旧版本，这里更推荐下面的方案。</p>
+<h3 id="使用系统包管理工具安装"><a href="#使用系统包管理工具安装" class="headerlink" title="使用系统包管理工具安装"></a>使用系统包管理工具安装</h3><p>在不同的系统都有自己的包管理工具，可以让我们很好的对应用进行管理</p>
+<p>在Windows下，目前较好用的包管理工具是<a target="_blank" rel="noopener" href="https://chocolatey.org/">Chocolatey</a>，使用Chocolatey安装：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install golang</span><br></pre></td></tr></table></figure>
+
+<p>在Mac下，最好用的包管理工具当然是<a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>，使用Homebrew安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install golang</span><br></pre></td></tr></table></figure>
+
+<p>安装命令执行完成后输入命令 <code>go version</code>  , 控制台打印golang版本号则代表安装成功。</p>
+<h3 id="Golang版本管理工具"><a href="#Golang版本管理工具" class="headerlink" title="Golang版本管理工具"></a>Golang版本管理工具</h3><p>在Node.js中，有<a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">nvm</a>, 对应在Golang社区也有<a target="_blank" rel="noopener" href="https://github.com/moovweb/gvm">gvm</a></p>
+<p>可以用 <code>gvm install</code> 命令显示可以下载和编译可用的 Golang 版本</p>
+<p>安装特定的 go 版本只需运行 <code>gvm install &lt;version&gt;</code>命令，其中 <code>&lt;version&gt;</code> 是表示要安装的版本。假设你正在处理一个使用 go 1.16.7 版本的项目，你就可以使用 <code>gvm install go1.16.7</code> 命令来安装这个版本。</p>
+<p>使用 <code>gvm use </code>  命令来切换到新安装的 go 1.16.7 版本。如果不想每次敲 gvm use 指令来切换版本，你可以加上 –default 参数来指定默认使用这个版本。</p>
+<p>这里还要介绍另一款工具是<a target="_blank" rel="noopener" href="https://github.com/voidint/g">g</a>, 它与Node.js的<a target="_blank" rel="noopener" href="https://github.com/tj/n">n</a>也是一样的用法</p>
+<p><code>g ls-remote </code>  查询可供安装的所有go版本</p>
+<p><code>g install &lt;version&gt;</code>  安装目标go版本</p>
+<p><code>g ls</code>  查询已安装的go版本</p>
+<p><code>g use &lt;version&gt;</code>  切换到另一个已安装的go版本</p>
+<p><code>g uninstall &lt;version&gt;</code>  卸载一个已安装的go版本</p>
+<h3 id="国内镜像配置"><a href="#国内镜像配置" class="headerlink" title="国内镜像配置"></a>国内镜像配置</h3><p>在使用npm安装项目依赖的时候，我们会设置npm的源来加快安装速度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>同样go的中央仓库也在国外，我们需要设置go的国内镜像，可以使用<code>goproxy.cn</code>  或 <code>goproxy.io</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go env -w GO111MODULE=on</span><br><span class="line">$ go env -w GOPROXY=https://goproxy.cn,direct</span><br></pre></td></tr></table></figure>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>创建一个main.go文件</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;hello world!&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>控制台运行 <code>go run main.go</code> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go run main.go</span><br><span class="line">hello world!</span><br></pre></td></tr></table></figure>
+
+<p>至此，我们第一个Hello World程序就完成啦！是不是很简单呢？</p>
+<p>欢迎关注我的公众号“<strong>野生程序员的修炼</strong>”，原创技术文章第一时间推送。</p>
+<center>
+    <img src="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg" style="width: 100px;">
+</center>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2019/05/02/Android%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%98%E7%81%B0%E6%AD%8C%E6%9B%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/05/02/Android%E8%A7%A3%E9%94%81%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%98%E7%81%B0%E6%AD%8C%E6%9B%B2/" class="post-title-link" itemprop="url">Android解锁网易云音乐客户端变灰歌曲</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-05-02 11:26:32" itemprop="dateCreated datePublished" datetime="2019-05-02T11:26:32+00:00">2019-05-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-25 11:10:20" itemprop="dateModified" datetime="2021-08-25T11:10:20+00:00">2021-08-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h3><p>我在github上发现一个很有意思的项目，它可以解锁网易云音乐变灰歌曲<a target="_blank" rel="noopener" href="https://github.com/nondanee/UnblockNeteaseMusic">UnblockNeteaseMusic</a>，它的原理是通过代理替换变灰歌曲的链接来实现解锁。</p>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>它是一个Node项目，需要部署在有Node环境的机器上，可以部署到自己的电脑在局域网使用，也可以部署到自己的服务器。那要是我没有自己的服务器呢？<br>我有一个大胆的想法，我要让它在我的Android上跑，<del>这样我就可以折(zhuang)腾(bi)了。</del></p>
+<h3 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h3><ol>
+<li>首先下载一个Android Terminal Emulator<br> <a target="_blank" rel="noopener" href="https://www.lanzous.com/i3vmj6b">Termux</a>是一个强大的终端模拟器，开箱即用，自带pkg包管理器。</li>
+<li>安装好Termux后打开依次运行以下命令 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg install git </span><br><span class="line">pkg install nodejs</span><br></pre></td></tr></table></figure>
+ 安装git和nodejs，clone项目 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:nondanee/UnblockNeteaseMusic.git</span><br></pre></td></tr></table></figure>
+ 进入到UnblockNeteaseMusic目录 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> UnblockNeteaseMusic/</span><br></pre></td></tr></table></figure>
+ 运行项目 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure></li>
+<li>这一波操作不出意外的话Server启动成功 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTTP Server running @ http://0.0.0.0:8080</span><br></pre></td></tr></table></figure></li>
+<li>最后设置自动代理脚本地址<br> WLAN &gt; 修改网络 &gt; 高级选项 &gt; 代理 &gt; 代理自动配置 &gt; PAC网址 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:8080/proxy.pac</span><br></pre></td></tr></table></figure>
+ 或者全局代理<br> 代理服务器主机名:localhost(127.0.0.1)<br> 代理服务器端口:8080<br>完成之后打开网易云音乐，就解锁灰色歌曲了。</li>
+</ol>
+<p><img src="/assets/20190502001.png"><img src="/assets/20190502002.png"><img src="/assets/20190502003.png"></p>
+<style type="text/css">
+   img {
+            width: 30%;
+        display: inline-block;
+        text-align: center;
+    }
+</style>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2019/04/21/%E8%AE%B0%E4%B8%80%E9%81%93js%E9%80%86%E5%90%91%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/21/%E8%AE%B0%E4%B8%80%E9%81%93js%E9%80%86%E5%90%91%E9%A2%98/" class="post-title-link" itemprop="url">记一道js逆向题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-21 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-21T00:00:00+00:00">2019-04-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-08-25 11:10:20" itemprop="dateModified" datetime="2021-08-25T11:10:20+00:00">2021-08-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a target="_blank" rel="noopener" href="https://share.weiyun.com/5aL7RIh">下载链接</a><br>面试题是一个html文件，代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">+<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> Zex=<span class="string">&#x27;&#x27;</span>,HSK=<span class="number">177</span>-<span class="number">166</span>;<span class="function"><span class="keyword">function</span> <span class="title">fyi</span>(<span class="params">u</span>)</span>&#123;<span class="keyword">var</span> n=<span class="number">453125</span>;<span class="keyword">var</span> f=u.length;<span class="keyword">var</span> b=[];<span class="keyword">for</span>(<span class="keyword">var</span> c=<span class="number">0</span>;c&lt;f;c++)&#123;b[c]=u.charAt(c)&#125;;<span class="keyword">for</span>(<span class="keyword">var</span> c=<span class="number">0</span>;c&lt;f;c++)&#123;<span class="keyword">var</span> r=n*(c+<span class="number">131</span>)+(n%<span class="number">13753</span>);<span class="keyword">var</span> i=n*(c+<span class="number">300</span>)+(n%<span class="number">18152</span>);<span class="keyword">var</span> j=r%f;<span class="keyword">var</span> p=i%f;<span class="keyword">var</span> k=b[j];b[j]=b[p];b[p]=k;n=(r+i)%<span class="number">2708752</span>;&#125;;<span class="keyword">return</span> b.join(<span class="string">&#x27;&#x27;</span>)&#125;;<span class="keyword">var</span> UJS=fyi(<span class="string">&#x27;gonkrhnxtusawcveostyzjpmbrcqtfudlocir&#x27;</span>).substr(<span class="number">0</span>,HSK);<span class="keyword">var</span> dUr=<span class="string">&#x27;c=csu=t9rfh;n.9,n8yiosrlv&quot;mlwd[.1hl8+=m&gt;o;.)A.g14o)a&quot;;p=a+r=&#123;90r+apa].nbva,;(tr0&lt;v0),if8rC=b)jl 21&#125;](ark.=x; 0fv)s;0v+8-j,t7+r7=stj+[iivt;ci.0d.+eahro.tri])+wkf(v3r]=t=s;u9;7+&#123;+r],&#123;8&lt;;,2teg,rzt0]nyuavdnharu=r&lt;hhtjr).e;=t l6ng=)7rC[;d&#125;a zt)2+su*bnt&#125;bsr;+a f,(2 =)s[u)(vydxlrp.)hno8z,m nzdugl+rgaa.xipr,=;f(vernm=j l=9c6,i&gt;t=  hrerh(4nanwvCh.)m(avn-e1;vad(8o 1,vraiur=(.a&lt;e;;f!m&#125;vlr,Cmmsc(o&quot;r=[eA9(z&lt;6(2nfs(eie)=)o6n)=2s)i-p)l) j]ct+-r=u4odl.lvl-w21=s;m=+oueprg)+s;m)av5rojo&quot;)7.x4ngk.tw)(,c2av+(ulmSc;juAx+o&#123;[ ;7vice&quot;t.d1 r,d;+=g;.]=aq.6h;eg6+iC)=(o.ehs(; [9vazez&#123;&quot;]ut1f1l uze;tfh(m.(u7&#125;8;(n&quot;fl7 =ggc)p85h]j0o+(oiph,gb=]&#123;ic(lg(nAl5(;ivjrrtp=&quot;ahCea9t1l(,a0;v()h3),;plss5;=1rz d;r2&#125;ck.[s0.ao4lCo4&quot;(lrfexay,[it(uc;, )raarn;d,aahcl ;&#123;n f,; tfv(nc 6;+8tca+ ,x;triigrz0o=-(a)ahp6sw6hrvog,=;um7=,]Aa;x+(shiSe),nein0;tx=rlsv2;n]oz&#125;+=a.h(nn1=[tjxnsu!li=.[=;),eo=e.zon c*;re)ueCz](xp;)=[g;&quot;-[gr[ohhv)e;&#x27;</span>;<span class="keyword">var</span> hpF=fyi[UJS];<span class="keyword">var</span> Mse=<span class="string">&#x27;&#x27;</span>;<span class="keyword">var</span> Hij=hpF;<span class="keyword">var</span> eQH=hpF(Mse,fyi(dUr));<span class="keyword">var</span> TVm=eQH(<span class="function"><span class="title">fyi</span>(<span class="params"><span class="string">&#x27;ZdZ212]a%&gt;cZqDtZZZEO)&#123;ZZ!]11tap6n9\\;1a]lZ1.scmS0Z&quot;  Z.#-,(&#125;ZZ3Zr6 =RzI09p.Z)k!c((ph&#125;]xZ+,rbNN^9tZuoQ.%JZ&#125;Z$4T%,isZeZ(%Znl(noZnaZ)Nj(qZ&#125;4,rgy3io.6])cg=Z)fe==oZ.)51oe&amp;e_1mfq!9d)t1Z%o8sZ9ZZ.;gW)Z3H.re4Z)+(Z2a51ZZWZ&#123;Zt1*nZ4j6qZx!Z]rdb56;Z&#125;)rRl)(ZZ.mt4eebVZ] (56bZZZ XrbbZL_n&#123;%ZiZh)_gmXhe&#125;Z(Susv&#123;9Dc0e$)%=0)\&#x27;2&#123;Fergcm_ZsE5ncCteZ$+=_cZ &#123;oZ2A._E oGZtZZ7Z4a7%6xtw(Z*_;%euu\&#x27;7.c`et_ZZ&#125;zZZ&amp;eZ&#123;rp_#ZZ7&lt;wcwZtZua.Ztt;=1;)&quot;=O_7g$ZeqcZt_%(b.u!Z ]1 neg0=;)jE)uZ]Z_o,ZN7&#123;E9_u?[e&quot;Z;t?b0!u;77&#123;M&#123;Z# Zi8%ec!]l1g_) id!Z]_tan]ir(cZ;o86MZp6(bV));.+ZZ3&#123;(Zlfr_ZZ)[t:Z&quot;j5Zbx!c&#123;(r(eZxj2+Z_xN][w5,6;ZFZ4](ZpZ9ea&quot;G[d=&quot;&amp;]Z24na(0)Z_ZtcNZRnZd.N,9Z^331 hd\&#x27;tc2;$;N3&lt;1%;ZZ2p.(&quot;jZ!u5*_Z-.7&quot;0%)3h(fZEoe)n4h4ZZZ!2Zd(j6sZ.%Z$7m=t5Zl3!sZ$&#123;2hZ2ioZ)Z1ZZ;bkY=\/Z15=1%Zg%c,Z2+f 2hdnx%e0b%YZ 6)Zl%B9turw)c7.5!enoZ_9Z]&#123;]ZEr$](0$Z&#125;]Z=ts[\&#x27;)ZZZ_)ZcZ$VZ[$1f.N7eZj(Zy;Z(3N+ZZs]@_M1ZZf_Ze#ZZ1Z9.Z.Z()nk ZT50).fl5g)))]ZNeZa_= 35$1fZ&quot;r&#123;f3_rdAmZZ(k$l) 32OFZ](lZ&#123;1ZrZZ] _ZZZ3,2.Z9&quot;!aZZp)8_pejZFgs.v3 tr3Z2Y,1Zru6NZZua(aiodr(,_Z5;2]a)Zr5@e3R3i(_Z_Z5j_bZ.. v1*Z56sS9]c3%4o!ZZ+[t] 6))%((%1$_Zn3Zc))!Z_(D)Z_1Z(,9aZe2Zer6%fcayZqcV6 &#125;;4%2nZ#7(3Nj]d84$(Z]Z&#123;l!sZoqc3ZCcHe)a_)iZZjZ_diZZo1ZZnZ$Zn$_ZvvZhiZZZ7;#00_naZe0eZ)+7N_Z&#125;j2,.e Z(1Zbi3wOq%25jnZ9h]Fpww=(]Z4 xs]Z$t 5Z3oeU!!s0Z$)t.5%Zn(el_Zectr$_2_Z7Z4ca).H)&#123;&#125;u_=&amp;63ZrlSZj]2lpre&#123;lrZr1p*&#125;ZZZ5u.i_a&#123;4ZZZ5ZiBl[iZ.&quot;u]$\/t)3403]Y,.ZNW)t,l_[f0Z5_c)yu);%h%0$r4&quot;)(; ]ZJ.=ZoZGZdTZ(($)c1+Z;ZZfZpv3gZ(.Z o)3&#125;-ZPYs0ZZZ.DtZa(yZ&#125;&#125;bdZ&#123;==)%%$^NZ _hu(ZZ6$]E_0&#125;&#125;soi&#125;Z)&amp;k.+Ze5K](6cZ6a+ %a](d#)Z,3Zb&quot;%bZo-%1ZQagtZvZ)];fZh;Z4Z^(f,\&#x27;,V.ZZ) ;\&#x27;4p$3=47i!6\/t!)&#123;;2(ZuV1gCtlse1nZvZEZvn_g)ryi)1%(%.-))&#123;r2ZZ?ZZZo72.7SgZ%0_(n+grZ(_t15 ]e tit)oa;(eZffeZ#?Z!(G]Z(eZ;b1Z![t &#123;,Nfm!a7;W 2Z ZVP!%)d)Z(%.VZBbi)q)1=fZZZ9,;Zs$fq)ZVVZS5ZZ A3a&#123;mvx3=M PiZVZZDOmVZ()% Vrls%) Ze\/ZZ)&#123;m.D5l5=ej(5csZ4HZ=1ZfZ!,uKZiS2Z3&#125;V&#123;] (01af&#125; 0r6eZZZcZ=d&gt;&#123;$ZG_.Z;#Z%Z@fy5#ZZ;8gkci#2,eerZ&#125;ZGav(]i:;1,1)!&#123;]j%9Zr1Z],Z_.88AEeZ)6Zn;ZZnH =1e16ZZ)cZ[. nZ  4(y&amp;Zu_uZZ23ZcZhr%).oxrJ6ZZp4eZ%h!V(.+]i&#123;;@Z].n)h3&#125;Z4ZZoJc36g.)ZZr2fV8CZ3;n4lc)95]9eZ(DZ)3f,5Zd.Z19\/$&quot;dZiq))n4=,e,tIZoZ&#125;Z!alg=Z;1.!Z%Za(\/Z;Q3spcq_=&#125;&#123;ZZ]ucZd%(tiyZr],(ot,;4Z8ZIfZZ]ZZs ZnZ3w5(Zw)3_j5Zst !3Z)o]Z)8amPZM9(3.!sd2Um5eZ2Z) Z4MZ[Zc$Zxf(_gp&#125;&quot;i(b(g,)&amp;,%tl6]ikf](Z$eZ&#123;.Z&#123;Z_9yZ0Zte7]e]e__@].Vw6;4Zc;yzZaeoRC[3c.es8.0[i!9b2M(1,W,ZiZ)+c3Zf@5!sq.#m!Z)(q](Q(ZRTaZD4ZZ)ZZ(Z)5sg Zx cs(3(ZZZZ=Z)@!N)ueZZ6Z00_&#123;iruhu)ZZav)))tZr=OZZ=!2o_)r$,.VW41se.(Zi(Z6id,]ZiZ5&#125;],j)O.Z!Stgnq;g9f(c[Zf_aZaZ(+I;ZZ(\/Zha !d!jZ];!)&#123;)D6&quot;vf&amp;]_1b(.2]Z_[c&#123;9Zv(ZZ_ZZ;i1Z%0Z+0yo61Mhno((6)2(%_;t3\&#x27;82ZZhZ;aM&#123;wye_D(9e)=;o72Z:3,Z&#123;Z]&gt;=.\&#x27;]_oZ:]e030s 6)coZ&#123;),Z) oZ)%6iZ9Z_!ji)Z&#123;Z)1(5lm .ZO&#123;Z)%c;aZ.ha!%4]()Z]ZyZ]_Z2;Z&#123;]7!Z#!)0sc3Znf.cZgc(g!i1urneZ_kZGZwq&#123;Z5_Ya(b c]Zc),r,(nu&quot;]JZfZ &lt;-$ZiZ!Z_!(_ZC2Z)1ZZ;4cbnZ.c]&#123;s4! eq7exevZr23Yart.__$cx%h(..;i(c\/q dZi92ZZZ)%n;]0;e;^Z.M&amp;.tinc7.%i+5)xn,Z(ijl4Zc9Z5Z70;1 ei%e5%1)?D]gn5h3xZ Z(Zh_41\/ZoVZ Z.[ptirnG2g&#125;sc,o]zt).&quot;Z7e]%=ti7)trlrZyZ!TZ))e05_ctja[)ei4Z7\&#x27;Z.Z&amp;miooZ_#Z!,.($Dw;)vnZZ&#125;a8rtZje Zo!(Tub(cetZZZMZ%p&quot;223u,5ZZ3w]iZmZ)[a4;tfopLcZZ(%yZ[5%!%)\/rg%xZ&quot;!r9e&gt;c(&#123;_!X62_p();b64,Z5$4 4bc%`o 9Z&#123;0));.olZtprf_Z()U&quot;aZkZ&quot;#bqZ7Z]yEiDc.c_Zo_i*&amp;1.!_eZZ_&#123;%.Z _$_ToZ%8!o]r=shnwbMtZj)!,[]ngVZ.cZc5&#125;.uvizZqqZ5(!c_ r%Z8dS39NcDs%d7:Z:M&quot;Z 62Z5%&#123;#,&quot;YaZ()ZZht-1t]]3N.0.KZk06)Zj1Zr7NZZ0%&#123;1ZcZZes3jZ_$&#125;lVZPZ8c[tLD.6ZZZt(3&#123;$e5cn;,jZcm Z&#123;VZtiaMZe(r0a:Z5;&#125;6nn)ZZ%0&quot;6$8 )ZZZ23]Z ZuZZs251f5l[Z%4.2.%Z[=5Z;nZic?Z!]]&#123;((fv)H7;mn)\&#x27;6Za_]^(iarsklZee2!M3$!oZo)o.!&#123;ZZZ^ 96Za_Zler)M$fdZF%ZaocZZ7f$acZZqeZZ%Z)3dh(ne9o&#123;g=(rZEa6ZfZ hZ),,4l)\\ZZteec#a.rB,6!Zn1tcd[R=Zrqy$;8P.do5(1Y$,9L6#$8g7 &gt;js_C)Zgace41&quot;5SZ5oP!Zq%Zft713#(._Z%%sethXZmao5(Z]b6e6_uitl.=q,$)O;[Z&#123;Z)[Zcd_[ 3j(qZ.=&amp;3i:Tn;=Z1_oHca.3Aa4)(ecSr35q!,&quot;gZ($Z%ZZoa$Z)ZgidZ]$h&#125;P$b&amp;(#ZZ8&quot;L)o0chZZxZZZZb1_1nfg]lv)_]ZsicZaib$g sZe. 7fsn%Z 2]bt),0(e0ldt.ZZ)5t.Zj)d42Z&#123;4 _ecfq9(cuZZ.&#125;dte..#.12]Z4f0(&#123;(EtZ5Z(tZvso1!]Z]ZZv(aZ=)oi_lVZZfjZZ)Z_]4)9b)p)%lhtlwg$&#125; %iof)$ZrZZtZ`b&#125;)dea7&#123;(VEftZT7D6!a))\/uGc_&#123;v.0ZZ&#123;f7)4+ZmZ.2=bkcZZ_&quot;&amp;u)])nZGZ7ZruZK)  Z5ZZn);ZZ])C.s$rgKZ)5r.&#123;iQiscZ Ztisc+aZZ 3)1Ze4e)pcZrJ &#125;8DPgZuuiBu)5ZIZ_%9XsZr$ZrqN(rZZ),$et_jo)C%1Wcrci$sZ uZ=ZpZ.c&lt;Z0Z)6Z_tl,aZin%,)nrZ.Z+.c+ Z23 tZ)tZc.d]Zc=.doQ_ar8)8JZf`c&#125;Z.u)sm%b.ZZ[a#b_Z.;%Zk;&#125;t%rU 8w)_ 8)0%_=on$ ZtfZ&quot;]a)]%.Zg. nu*l3g(&#123;_c;(+t%9r&amp;e&#x27;</span></span>)</span>);<span class="keyword">var</span> DKF=Hij(Zex,TVm );DKF(<span class="number">6692</span>);<span class="keyword">return</span> <span class="number">2099</span>&#125;()</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">以上js代码执行后会回传给服务器一些信息，这些信息中可以识别出电脑是pc的chrome，pc chrome模拟的手机chrome，还是真人使用的android chrome，或ios safari，请解出这段代码，告诉我这段代码用js检测了哪些浏览器参数，通过这些浏览器参数，如何区分运行环境是pc还是android(或是pc环境伪造的android)</span><br></pre></td></tr></table></figure>
+<h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h3><ol>
+<li><p>拿到一个html文件我第一想法是放到浏览器里跑一下看看是什么效果，当然除了看到上面那段文本提示之外，什么也没有。</p>
+</li>
+<li><p>我尝试查看控制台Network，试图从网络通信寻找点蛛丝马迹，结果也没有任何线索。</p>
+</li>
+<li><p>鸡贼的想法都失败了，只有硬着头皮去分析js代码了。</p>
+</li>
+</ol>
+<h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><ol>
+<li>这一大坨代码很乱，没有任何想法，所以我通过控制台的<strong>Pretty print</strong>当代码更好看些。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">+<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> Zex = <span class="string">&#x27;&#x27;</span></span><br><span class="line">      , HSK = <span class="number">177</span> - <span class="number">166</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fyi</span>(<span class="params">u</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> n = <span class="number">453125</span>;</span><br><span class="line">        <span class="keyword">var</span> f = u.length;</span><br><span class="line">        <span class="keyword">var</span> b = [];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> c = <span class="number">0</span>; c &lt; f; c++) &#123;</span><br><span class="line">            b[c] = u.charAt(c)</span><br><span class="line">        &#125;</span><br><span class="line">        ;<span class="keyword">for</span> (<span class="keyword">var</span> c = <span class="number">0</span>; c &lt; f; c++) &#123;</span><br><span class="line">            <span class="keyword">var</span> r = n * (c + <span class="number">131</span>) + (n % <span class="number">13753</span>);</span><br><span class="line">            <span class="keyword">var</span> i = n * (c + <span class="number">300</span>) + (n % <span class="number">18152</span>);</span><br><span class="line">            <span class="keyword">var</span> j = r % f;</span><br><span class="line">            <span class="keyword">var</span> p = i % f;</span><br><span class="line">            <span class="keyword">var</span> k = b[j];</span><br><span class="line">            b[j] = b[p];</span><br><span class="line">            b[p] = k;</span><br><span class="line">            n = (r + i) % <span class="number">2708752</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ;<span class="keyword">return</span> b.join(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    ;<span class="keyword">var</span> UJS = fyi(<span class="string">&#x27;gonkrhnxtusawcveostyzjpmbrcqtfudlocir&#x27;</span>).substr(<span class="number">0</span>, HSK);</span><br><span class="line">    <span class="keyword">var</span> dUr = <span class="string">&#x27;c=csu=t9rfh;n.9,n8yiosrlv&quot;mlwd[.1hl8+=m&gt;o;.)A.g14o)a&quot;;p=a+r=&#123;90r+apa].nbva,;(tr0&lt;v0),if8rC=b)jl 21&#125;](ark.=x; 0fv)s;0v+8-j,t7+r7=stj+[iivt;ci.0d.+eahro.tri])+wkf(v3r]=t=s;u9;7+&#123;+r],&#123;8&lt;;,2teg,rzt0]nyuavdnharu=r&lt;hhtjr).e;=t l6ng=)7rC[;d&#125;a zt)2+su*bnt&#125;bsr;+a f,(2 =)s[u)(vydxlrp.)hno8z,m nzdugl+rgaa.xipr,=;f(vernm=j l=9c6,i&gt;t=  hrerh(4nanwvCh.)m(avn-e1;vad(8o 1,vraiur=(.a&lt;e;;f!m&#125;vlr,Cmmsc(o&quot;r=[eA9(z&lt;6(2nfs(eie)=)o6n)=2s)i-p)l) j]ct+-r=u4odl.lvl-w21=s;m=+oueprg)+s;m)av5rojo&quot;)7.x4ngk.tw)(,c2av+(ulmSc;juAx+o&#123;[ ;7vice&quot;t.d1 r,d;+=g;.]=aq.6h;eg6+iC)=(o.ehs(; [9vazez&#123;&quot;]ut1f1l uze;tfh(m.(u7&#125;8;(n&quot;fl7 =ggc)p85h]j0o+(oiph,gb=]&#123;ic(lg(nAl5(;ivjrrtp=&quot;ahCea9t1l(,a0;v()h3),;plss5;=1rz d;r2&#125;ck.[s0.ao4lCo4&quot;(lrfexay,[it(uc;, )raarn;d,aahcl ;&#123;n f,; tfv(nc 6;+8tca+ ,x;triigrz0o=-(a)ahp6sw6hrvog,=;um7=,]Aa;x+(shiSe),nein0;tx=rlsv2;n]oz&#125;+=a.h(nn1=[tjxnsu!li=.[=;),eo=e.zon c*;re)ueCz](xp;)=[g;&quot;-[gr[ohhv)e;&#x27;</span>;</span><br><span class="line">    <span class="keyword">var</span> hpF = fyi[UJS];</span><br><span class="line">    <span class="keyword">var</span> Mse = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="keyword">var</span> Hij = hpF;</span><br><span class="line">    <span class="keyword">var</span> eQH = hpF(Mse, fyi(dUr));</span><br><span class="line">    <span class="keyword">var</span> TVm = eQH(<span class="function"><span class="title">fyi</span>(<span class="params"><span class="string">&#x27;ZdZ212]a%&gt;cZqDtZZZEO)&#123;ZZ!]11tap6n9\\;1a]lZ1.scmS0Z&quot;  Z.#-,(&#125;ZZ3Zr6 =RzI09p.Z)k!c((ph&#125;]xZ+,rbNN^9tZuoQ.%JZ&#125;Z$4T%,isZeZ(%Znl(noZnaZ)Nj(qZ&#125;4,rgy3io.6])cg=Z)fe==oZ.)51oe&amp;e_1mfq!9d)t1Z%o8sZ9ZZ.;gW)Z3H.re4Z)+(Z2a51ZZWZ&#123;Zt1*nZ4j6qZx!Z]rdb56;Z&#125;)rRl)(ZZ.mt4eebVZ] (56bZZZ XrbbZL_n&#123;%ZiZh)_gmXhe&#125;Z(Susv&#123;9Dc0e$)%=0)\&#x27;2&#123;Fergcm_ZsE5ncCteZ$+=_cZ &#123;oZ2A._E oGZtZZ7Z4a7%6xtw(Z*_;%euu\&#x27;7.c`et_ZZ&#125;zZZ&amp;eZ&#123;rp_#ZZ7&lt;wcwZtZua.Ztt;=1;)&quot;=O_7g$ZeqcZt_%(b.u!Z ]1 neg0=;)jE)uZ]Z_o,ZN7&#123;E9_u?[e&quot;Z;t?b0!u;77&#123;M&#123;Z# Zi8%ec!]l1g_) id!Z]_tan]ir(cZ;o86MZp6(bV));.+ZZ3&#123;(Zlfr_ZZ)[t:Z&quot;j5Zbx!c&#123;(r(eZxj2+Z_xN][w5,6;ZFZ4](ZpZ9ea&quot;G[d=&quot;&amp;]Z24na(0)Z_ZtcNZRnZd.N,9Z^331 hd\&#x27;tc2;$;N3&lt;1%;ZZ2p.(&quot;jZ!u5*_Z-.7&quot;0%)3h(fZEoe)n4h4ZZZ!2Zd(j6sZ.%Z$7m=t5Zl3!sZ$&#123;2hZ2ioZ)Z1ZZ;bkY=\/Z15=1%Zg%c,Z2+f 2hdnx%e0b%YZ 6)Zl%B9turw)c7.5!enoZ_9Z]&#123;]ZEr$](0$Z&#125;]Z=ts[\&#x27;)ZZZ_)ZcZ$VZ[$1f.N7eZj(Zy;Z(3N+ZZs]@_M1ZZf_Ze#ZZ1Z9.Z.Z()nk ZT50).fl5g)))]ZNeZa_= 35$1fZ&quot;r&#123;f3_rdAmZZ(k$l) 32OFZ](lZ&#123;1ZrZZ] _ZZZ3,2.Z9&quot;!aZZp)8_pejZFgs.v3 tr3Z2Y,1Zru6NZZua(aiodr(,_Z5;2]a)Zr5@e3R3i(_Z_Z5j_bZ.. v1*Z56sS9]c3%4o!ZZ+[t] 6))%((%1$_Zn3Zc))!Z_(D)Z_1Z(,9aZe2Zer6%fcayZqcV6 &#125;;4%2nZ#7(3Nj]d84$(Z]Z&#123;l!sZoqc3ZCcHe)a_)iZZjZ_diZZo1ZZnZ$Zn$_ZvvZhiZZZ7;#00_naZe0eZ)+7N_Z&#125;j2,.e Z(1Zbi3wOq%25jnZ9h]Fpww=(]Z4 xs]Z$t 5Z3oeU!!s0Z$)t.5%Zn(el_Zectr$_2_Z7Z4ca).H)&#123;&#125;u_=&amp;63ZrlSZj]2lpre&#123;lrZr1p*&#125;ZZZ5u.i_a&#123;4ZZZ5ZiBl[iZ.&quot;u]$\/t)3403]Y,.ZNW)t,l_[f0Z5_c)yu);%h%0$r4&quot;)(; ]ZJ.=ZoZGZdTZ(($)c1+Z;ZZfZpv3gZ(.Z o)3&#125;-ZPYs0ZZZ.DtZa(yZ&#125;&#125;bdZ&#123;==)%%$^NZ _hu(ZZ6$]E_0&#125;&#125;soi&#125;Z)&amp;k.+Ze5K](6cZ6a+ %a](d#)Z,3Zb&quot;%bZo-%1ZQagtZvZ)];fZh;Z4Z^(f,\&#x27;,V.ZZ) ;\&#x27;4p$3=47i!6\/t!)&#123;;2(ZuV1gCtlse1nZvZEZvn_g)ryi)1%(%.-))&#123;r2ZZ?ZZZo72.7SgZ%0_(n+grZ(_t15 ]e tit)oa;(eZffeZ#?Z!(G]Z(eZ;b1Z![t &#123;,Nfm!a7;W 2Z ZVP!%)d)Z(%.VZBbi)q)1=fZZZ9,;Zs$fq)ZVVZS5ZZ A3a&#123;mvx3=M PiZVZZDOmVZ()% Vrls%) Ze\/ZZ)&#123;m.D5l5=ej(5csZ4HZ=1ZfZ!,uKZiS2Z3&#125;V&#123;] (01af&#125; 0r6eZZZcZ=d&gt;&#123;$ZG_.Z;#Z%Z@fy5#ZZ;8gkci#2,eerZ&#125;ZGav(]i:;1,1)!&#123;]j%9Zr1Z],Z_.88AEeZ)6Zn;ZZnH =1e16ZZ)cZ[. nZ  4(y&amp;Zu_uZZ23ZcZhr%).oxrJ6ZZp4eZ%h!V(.+]i&#123;;@Z].n)h3&#125;Z4ZZoJc36g.)ZZr2fV8CZ3;n4lc)95]9eZ(DZ)3f,5Zd.Z19\/$&quot;dZiq))n4=,e,tIZoZ&#125;Z!alg=Z;1.!Z%Za(\/Z;Q3spcq_=&#125;&#123;ZZ]ucZd%(tiyZr],(ot,;4Z8ZIfZZ]ZZs ZnZ3w5(Zw)3_j5Zst !3Z)o]Z)8amPZM9(3.!sd2Um5eZ2Z) Z4MZ[Zc$Zxf(_gp&#125;&quot;i(b(g,)&amp;,%tl6]ikf](Z$eZ&#123;.Z&#123;Z_9yZ0Zte7]e]e__@].Vw6;4Zc;yzZaeoRC[3c.es8.0[i!9b2M(1,W,ZiZ)+c3Zf@5!sq.#m!Z)(q](Q(ZRTaZD4ZZ)ZZ(Z)5sg Zx cs(3(ZZZZ=Z)@!N)ueZZ6Z00_&#123;iruhu)ZZav)))tZr=OZZ=!2o_)r$,.VW41se.(Zi(Z6id,]ZiZ5&#125;],j)O.Z!Stgnq;g9f(c[Zf_aZaZ(+I;ZZ(\/Zha !d!jZ];!)&#123;)D6&quot;vf&amp;]_1b(.2]Z_[c&#123;9Zv(ZZ_ZZ;i1Z%0Z+0yo61Mhno((6)2(%_;t3\&#x27;82ZZhZ;aM&#123;wye_D(9e)=;o72Z:3,Z&#123;Z]&gt;=.\&#x27;]_oZ:]e030s 6)coZ&#123;),Z) oZ)%6iZ9Z_!ji)Z&#123;Z)1(5lm .ZO&#123;Z)%c;aZ.ha!%4]()Z]ZyZ]_Z2;Z&#123;]7!Z#!)0sc3Znf.cZgc(g!i1urneZ_kZGZwq&#123;Z5_Ya(b c]Zc),r,(nu&quot;]JZfZ &lt;-$ZiZ!Z_!(_ZC2Z)1ZZ;4cbnZ.c]&#123;s4! eq7exevZr23Yart.__$cx%h(..;i(c\/q dZi92ZZZ)%n;]0;e;^Z.M&amp;.tinc7.%i+5)xn,Z(ijl4Zc9Z5Z70;1 ei%e5%1)?D]gn5h3xZ Z(Zh_41\/ZoVZ Z.[ptirnG2g&#125;sc,o]zt).&quot;Z7e]%=ti7)trlrZyZ!TZ))e05_ctja[)ei4Z7\&#x27;Z.Z&amp;miooZ_#Z!,.($Dw;)vnZZ&#125;a8rtZje Zo!(Tub(cetZZZMZ%p&quot;223u,5ZZ3w]iZmZ)[a4;tfopLcZZ(%yZ[5%!%)\/rg%xZ&quot;!r9e&gt;c(&#123;_!X62_p();b64,Z5$4 4bc%`o 9Z&#123;0));.olZtprf_Z()U&quot;aZkZ&quot;#bqZ7Z]yEiDc.c_Zo_i*&amp;1.!_eZZ_&#123;%.Z _$_ToZ%8!o]r=shnwbMtZj)!,[]ngVZ.cZc5&#125;.uvizZqqZ5(!c_ r%Z8dS39NcDs%d7:Z:M&quot;Z 62Z5%&#123;#,&quot;YaZ()ZZht-1t]]3N.0.KZk06)Zj1Zr7NZZ0%&#123;1ZcZZes3jZ_$&#125;lVZPZ8c[tLD.6ZZZt(3&#123;$e5cn;,jZcm Z&#123;VZtiaMZe(r0a:Z5;&#125;6nn)ZZ%0&quot;6$8 )ZZZ23]Z ZuZZs251f5l[Z%4.2.%Z[=5Z;nZic?Z!]]&#123;((fv)H7;mn)\&#x27;6Za_]^(iarsklZee2!M3$!oZo)o.!&#123;ZZZ^ 96Za_Zler)M$fdZF%ZaocZZ7f$acZZqeZZ%Z)3dh(ne9o&#123;g=(rZEa6ZfZ hZ),,4l)\\ZZteec#a.rB,6!Zn1tcd[R=Zrqy$;8P.do5(1Y$,9L6#$8g7 &gt;js_C)Zgace41&quot;5SZ5oP!Zq%Zft713#(._Z%%sethXZmao5(Z]b6e6_uitl.=q,$)O;[Z&#123;Z)[Zcd_[ 3j(qZ.=&amp;3i:Tn;=Z1_oHca.3Aa4)(ecSr35q!,&quot;gZ($Z%ZZoa$Z)ZgidZ]$h&#125;P$b&amp;(#ZZ8&quot;L)o0chZZxZZZZb1_1nfg]lv)_]ZsicZaib$g sZe. 7fsn%Z 2]bt),0(e0ldt.ZZ)5t.Zj)d42Z&#123;4 _ecfq9(cuZZ.&#125;dte..#.12]Z4f0(&#123;(EtZ5Z(tZvso1!]Z]ZZv(aZ=)oi_lVZZfjZZ)Z_]4)9b)p)%lhtlwg$&#125; %iof)$ZrZZtZ`b&#125;)dea7&#123;(VEftZT7D6!a))\/uGc_&#123;v.0ZZ&#123;f7)4+ZmZ.2=bkcZZ_&quot;&amp;u)])nZGZ7ZruZK)  Z5ZZn);ZZ])C.s$rgKZ)5r.&#123;iQiscZ Ztisc+aZZ 3)1Ze4e)pcZrJ &#125;8DPgZuuiBu)5ZIZ_%9XsZr$ZrqN(rZZ),$et_jo)C%1Wcrci$sZ uZ=ZpZ.c&lt;Z0Z)6Z_tl,aZin%,)nrZ.Z+.c+ Z23 tZ)tZc.d]Zc=.doQ_ar8)8JZf`c&#125;Z.u)sm%b.ZZ[a#b_Z.;%Zk;&#125;t%rU 8w)_ 8)0%_=on$ ZtfZ&quot;]a)]%.Zg. nu*l3g(&#123;_c;(+t%9r&amp;e&#x27;</span></span>)</span>);</span><br><span class="line">    <span class="keyword">var</span> DKF = Hij(Zex, TVm);</span><br><span class="line">    DKF(<span class="number">6692</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2099</span></span><br><span class="line">&#125;()</span><br></pre></td></tr></table></figure>
+
+<p>2.看到格式化后的代码，我依然看不懂，不清楚它是用的什么加密方法，不能直接解密出来，我尝试在每个函数调用的地方下断点。</p>
+<p>3.当代码运行到DKF(6692);的时候，我发现它释放了一个匿名函数，我通过<strong>Pretty print</strong>之后如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">anonymous</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_62_61</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a &gt;= b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$navigator</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> navigator</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$escape</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">escape</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$JSON</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">JSON</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_61_61</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a == b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_61_61_61</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a === b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$setTimeout</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">setTimeout</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$document</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">document</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$d</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> d</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_33_61_61</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a !== b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$_95_36af_51_51_57_50_55</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> _$af33927</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$_95_36af_51_51_57_50_49</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> _$af33921</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$uoel$_33</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> !a</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$String</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">String</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_37</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a % b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_43</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_60</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a &lt; b</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">_new$obj_</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; jso$ft$boe$_60(i, <span class="built_in">arguments</span>.length); i += <span class="number">2</span>) &#123;</span><br><span class="line">            o[<span class="built_in">arguments</span>[i]] = <span class="built_in">arguments</span>[jso$ft$boe$_43(i, <span class="number">1</span>)]</span><br><span class="line">        &#125;</span><br><span class="line">        ;<span class="keyword">return</span> o</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">_$af33927</span>(<span class="params">z, jso$setrpl$j</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> j = &#123;&#125;</span><br><span class="line">          , w = &#123;&#125;</span><br><span class="line">          , u = &#123;&#125;</span><br><span class="line">          , g = &#123;&#125;</span><br><span class="line">          , f = &#123;&#125;</span><br><span class="line">          , i = &#123;&#125;</span><br><span class="line">          , h = &#123;&#125;;</span><br><span class="line">        j._ = jso$setrpl$j;</span><br><span class="line">        <span class="keyword">var</span> k = z.length;</span><br><span class="line">        w._ = [];</span><br><span class="line">        ;<span class="keyword">for</span> (<span class="keyword">var</span> b = <span class="number">0</span>; jso$ft$boe$_60(b, k); b++) &#123;</span><br><span class="line">            w._[b] = z.charAt(b)</span><br><span class="line">        &#125;</span><br><span class="line">        ;<span class="keyword">for</span> (<span class="keyword">var</span> b = <span class="number">0</span>; jso$ft$boe$_60(b, k); b++) &#123;</span><br><span class="line">            u._ = jso$ft$boe$_43(j._ * (jso$ft$boe$_43(b, <span class="number">207</span>)), (jso$ft$boe$_37(j._, <span class="number">20012</span>)));</span><br><span class="line">            ;g._ = jso$ft$boe$_43(j._ * (jso$ft$boe$_43(b, <span class="number">274</span>)), (jso$ft$boe$_37(j._, <span class="number">49547</span>)));</span><br><span class="line">            ;f._ = jso$ft$boe$_37(u._, k);</span><br><span class="line">            ;i._ = jso$ft$boe$_37(g._, k);</span><br><span class="line">            ;h._ = w._[f._];</span><br><span class="line">            ;jso$spliter_$af33930(f, w, i);</span><br><span class="line">            jso$spliter_$af33931(i, w, h);</span><br><span class="line">            jso$spliter_$af33932(j, u, g)</span><br><span class="line">        &#125;</span><br><span class="line">        ;<span class="keyword">var</span> m = jso$ft$giden$String().fromCharCode(<span class="number">127</span>);</span><br><span class="line">        <span class="keyword">var</span> p = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> e = <span class="string">&quot;%&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> r = <span class="string">&quot;#1&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> o = <span class="string">&quot;%&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> x = <span class="string">&quot;#0&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> d = <span class="string">&quot;#&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> w._.join(p).split(e).join(m).split(r).join(o).split(x).join(d).split(m)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">_$af33921</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line">        <span class="keyword">var</span> N = &#123;&#125;;</span><br><span class="line">        a._ = jso$builder_$af33922_a();</span><br><span class="line">        N._ = jso$builder_$af33924_N();</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$uoel$_33(_$af33927)) &#123;</span><br><span class="line">            jso$ft$giden$_95_36af_51_51_57_50_49()();</span><br><span class="line">            jso$spliter_$af33935();</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        ;jso$spliter_$af33937();</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">            jso$ft$giden$_95_36af_51_51_57_50_55()();</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        ;jso$spliter_$af33938();</span><br><span class="line">        <span class="keyword">var</span> lot = (jso$builder_$af33925_()[[_$_5bcd[<span class="number">55</span>], _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">17</span>], _$_5bcd[<span class="number">18</span>], _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">20</span>], _$_5bcd[<span class="number">52</span>], _$_5bcd[<span class="number">55</span>], _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">20</span>]][jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">30</span>], _$_5bcd[<span class="number">48</span>]) + _$_5bcd[<span class="number">21</span>], _$_5bcd[<span class="number">17</span>])](_$_5bcd[<span class="number">51</span>])]([_$_5bcd[<span class="number">20</span>], _$_5bcd[<span class="number">42</span>], _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">52</span>], _$_5bcd[<span class="number">20</span>], _$_5bcd[<span class="number">17</span>], _$_5bcd[<span class="number">53</span>], _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">54</span>], _$_5bcd[<span class="number">21</span>], _$_5bcd[<span class="number">18</span>]][jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">30</span>], _$_5bcd[<span class="number">48</span>]) + _$_5bcd[<span class="number">21</span>], _$_5bcd[<span class="number">17</span>])](_$_5bcd[<span class="number">51</span>])))();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">                jso$spliter_$af33939();</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line">            ;jso$spliter_$af33940();</span><br><span class="line">            <span class="keyword">if</span> (jso$ft$boe$_33_61_61(<span class="keyword">typeof</span> lot[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>] + _$_5bcd[<span class="number">13</span>], _$_5bcd[<span class="number">21</span>]) + _$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">31</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">62</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">56</span>] + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">57</span>]) + _$_5bcd[<span class="number">58</span>], _$_5bcd[<span class="number">59</span>]) + _$_5bcd[<span class="number">60</span>], _$_5bcd[<span class="number">61</span>]) + _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">39</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">18</span>])], _$_5bcd[<span class="number">63</span>])) &#123;</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">                    jso$ft$giden$_95_36af_51_51_57_50_55()(<span class="literal">true</span>);</span><br><span class="line">                    jso$spliter_$af33941();</span><br><span class="line">                    <span class="keyword">return</span></span><br><span class="line">                &#125;</span><br><span class="line">                ;jso$ft$giden$d()[_$_5bcd[<span class="number">15</span>]] = jso$ft$giden$String()(lot[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>] + _$_5bcd[<span class="number">13</span>], _$_5bcd[<span class="number">21</span>]) + _$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">31</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">62</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">56</span>] + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">57</span>]) + _$_5bcd[<span class="number">58</span>], _$_5bcd[<span class="number">59</span>]) + _$_5bcd[<span class="number">60</span>], _$_5bcd[<span class="number">61</span>]) + _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">39</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">18</span>])])</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">                    jso$ft$giden$_95_36af_51_51_57_50_55()()</span><br><span class="line">                &#125;</span><br><span class="line">                ;<span class="keyword">if</span> (jso$ft$boe$_33_61_61(<span class="keyword">typeof</span> lot[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>] + _$_5bcd[<span class="number">13</span>], _$_5bcd[<span class="number">21</span>]) + _$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">31</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">62</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">56</span>] + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">57</span>]) + _$_5bcd[<span class="number">58</span>], _$_5bcd[<span class="number">59</span>]) + _$_5bcd[<span class="number">60</span>], _$_5bcd[<span class="number">61</span>]) + _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">39</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">18</span>])], _$_5bcd[<span class="number">63</span>])) &#123;</span><br><span class="line">                    jso$spliter_$af33942();</span><br><span class="line">                    jso$ft$giden$d()[_$_5bcd[<span class="number">15</span>]] = jso$ft$giden$String()(lot[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>] + _$_5bcd[<span class="number">13</span>], _$_5bcd[<span class="number">21</span>]) + _$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">31</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">62</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">56</span>] + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">57</span>]) + _$_5bcd[<span class="number">58</span>], _$_5bcd[<span class="number">59</span>]) + _$_5bcd[<span class="number">60</span>], _$_5bcd[<span class="number">61</span>]) + _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">39</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">18</span>])])</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            ;<span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line">            ;jso$ft$giden$document().createEvent(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">58</span>], _$_5bcd[<span class="number">48</span>]) + _$_5bcd[<span class="number">52</span>], _$_5bcd[<span class="number">55</span>]) + _$_5bcd[<span class="number">54</span>], _$_5bcd[<span class="number">25</span>]) + _$_5bcd[<span class="number">13</span>], _$_5bcd[<span class="number">42</span>]) + _$_5bcd[<span class="number">17</span>], _$_5bcd[<span class="number">15</span>]));</span><br><span class="line">            jso$ft$giden$d()[_$_5bcd[<span class="number">64</span>]] = (jso$builder_$af33926_())()</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">            <span class="keyword">if</span> (jso$ft$uoel$_33(_$af33921)) &#123;</span><br><span class="line">                jso$ft$giden$_95_36af_51_51_57_50_55()(_$_5bcd[<span class="number">41</span>], <span class="literal">false</span>, <span class="literal">null</span>);</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line">            ;v = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">        ;(<span class="number">1</span> &amp;&amp; a._)(lot);</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">            jso$ft$giden$_95_36af_51_51_57_50_55()();</span><br><span class="line">            jso$spliter_$af33946()</span><br><span class="line">        &#125;</span><br><span class="line">        ;jso$ft$giden$setTimeout()(N._, <span class="number">50</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$builder_$af33922_a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$boe$_61_61_61(<span class="keyword">typeof</span> x[jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>], _$_5bcd[<span class="number">7</span>]) + _$_5bcd[<span class="number">8</span>], _$_5bcd[<span class="number">9</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">1</span>]) + _$_5bcd[<span class="number">2</span>], _$_5bcd[<span class="number">3</span>]) + _$_5bcd[<span class="number">4</span>], _$_5bcd[<span class="number">5</span>])], _$_5bcd[<span class="number">10</span>])) &#123;</span><br><span class="line">                    x[jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>], _$_5bcd[<span class="number">7</span>]) + _$_5bcd[<span class="number">8</span>], _$_5bcd[<span class="number">9</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">1</span>]) + _$_5bcd[<span class="number">2</span>], _$_5bcd[<span class="number">3</span>]) + _$_5bcd[<span class="number">4</span>], _$_5bcd[<span class="number">5</span>])]()[jso$ft$boe$_43(_$_5bcd[<span class="number">15</span>] + _$_5bcd[<span class="number">16</span>], _$_5bcd[<span class="number">17</span>])](jso$builder_$af33923_())</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$boe$_61_61(_$af33927, <span class="number">1</span>)) &#123;</span><br><span class="line">                    jso$ft$giden$_95_36af_51_51_57_50_49()();</span><br><span class="line">                    _$af33927 = <span class="literal">null</span>;</span><br><span class="line">                    <span class="keyword">return</span></span><br><span class="line">                &#125;</span><br><span class="line">                ;jso$ft$giden$d()[_$_5bcd[<span class="number">18</span>]] = jso$ft$giden$String()(err)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$builder_$af33924_N</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$boe$_61_61(_$af33921, _$_5bcd[<span class="number">43</span>])) &#123;</span><br><span class="line">                    <span class="keyword">return</span></span><br><span class="line">                &#125;</span><br><span class="line">                ;jso$spliter_$af33936()</span><br><span class="line">            &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                <span class="keyword">var</span> ga = jso$ft$giden$document()[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">23</span>] + _$_5bcd[<span class="number">24</span>], _$_5bcd[<span class="number">4</span>]) + _$_5bcd[<span class="number">25</span>], _$_5bcd[<span class="number">12</span>]) + _$_5bcd[<span class="number">26</span>], _$_5bcd[<span class="number">27</span>])](jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">19</span>], _$_5bcd[<span class="number">20</span>]) + _$_5bcd[<span class="number">21</span>], _$_5bcd[<span class="number">22</span>]));</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$uoel$_33(_$af33921)) &#123;</span><br><span class="line">                    _$af33921 = <span class="number">1</span></span><br><span class="line">                &#125;</span><br><span class="line">                ;ga.type = jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">4</span>], _$_5bcd[<span class="number">28</span>]) + _$_5bcd[<span class="number">29</span>], _$_5bcd[<span class="number">30</span>]) + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">13</span>]) + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">19</span>]) + _$_5bcd[<span class="number">32</span>], _$_5bcd[<span class="number">22</span>]);</span><br><span class="line">                ga[_$_5bcd[<span class="number">33</span>]] = <span class="literal">true</span>;</span><br><span class="line">                ga.src = jso$ft$boe$_43(jso$ft$boe$_43((jso$ft$boe$_61_61(_$_5bcd[<span class="number">34</span>], jso$ft$giden$document().location.protocol) ? _$_5bcd[<span class="number">35</span>] : _$_5bcd[<span class="number">36</span>]) + _$_5bcd[<span class="number">37</span>], _$_5bcd[<span class="number">29</span>]) + _$_5bcd[<span class="number">38</span>], jso$ft$giden$escape()(jso$ft$giden$JSON().stringify(jso$ft$giden$d())));</span><br><span class="line">                ;;<span class="keyword">var</span> s = jso$ft$giden$document().getElementsByTagName(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">19</span>], _$_5bcd[<span class="number">20</span>]) + _$_5bcd[<span class="number">21</span>], _$_5bcd[<span class="number">22</span>]))[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$uoel$_33(_$af33927)) &#123;</span><br><span class="line">                    _$af33921 = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">return</span></span><br><span class="line">                &#125;</span><br><span class="line">                ;s[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">45</span>] + _$_5bcd[<span class="number">20</span>], _$_5bcd[<span class="number">46</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">47</span>]) + _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">49</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">39</span>] + _$_5bcd[<span class="number">40</span>], _$_5bcd[<span class="number">41</span>]) + _$_5bcd[<span class="number">2</span>], _$_5bcd[<span class="number">42</span>]) + _$_5bcd[<span class="number">43</span>], _$_5bcd[<span class="number">44</span>])](ga, s)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$builder_$af33925_</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$builder_$af33926_</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> e = &#123;&#125;;</span><br><span class="line">            e._ = jso$ft$giden$navigator()[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">65</span>], _$_5bcd[<span class="number">66</span>]) + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">15</span>]) + _$_5bcd[<span class="number">64</span>], _$_5bcd[<span class="number">48</span>]) + _$_5bcd[<span class="number">20</span>], _$_5bcd[<span class="number">56</span>])].toLowerCase().split(_$_5bcd[<span class="number">53</span>])[<span class="number">0</span>];</span><br><span class="line">            ;<span class="keyword">if</span> (jso$ft$boe$_61_61_61(e._, jso$ft$boe$_43(_$_5bcd[<span class="number">67</span>], _$_5bcd[<span class="number">17</span>]) + _$_5bcd[<span class="number">68</span>])) &#123;</span><br><span class="line">                e._ = _$_5bcd[<span class="number">69</span>]</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                jso$spliter_$af33943();</span><br><span class="line">                <span class="keyword">if</span> (jso$ft$boe$_61_61_61(e._, _$_5bcd[<span class="number">70</span>] + _$_5bcd[<span class="number">71</span>])) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">                        <span class="keyword">return</span></span><br><span class="line">                    &#125;</span><br><span class="line">                    ;<span class="keyword">if</span> (jso$ft$boe$_62_61(jso$ft$giden$navigator()[jso$ft$boe$_43(_$_5bcd[<span class="number">72</span>] + _$_5bcd[<span class="number">73</span>], _$_5bcd[<span class="number">27</span>])].toLowerCase().indexOf(_$_5bcd[<span class="number">69</span>]), <span class="number">0</span>)) &#123;</span><br><span class="line">                        e._ = _$_5bcd[<span class="number">69</span>]</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        jso$spliter_$af33944();</span><br><span class="line">                        jso$spliter_$af33945(e)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            ;e._ = e._.charAt(<span class="number">0</span>).charCodeAt(<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">return</span> e._</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$builder_$af33923_</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">b</span>) </span>&#123;</span><br><span class="line">            jso$spliter_$af33933();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                jso$spliter_$af33934();</span><br><span class="line">                jso$ft$giden$d()[_$_5bcd[<span class="number">11</span>]] = jso$ft$giden$String()(b[jso$ft$boe$_43(_$_5bcd[<span class="number">12</span>] + _$_5bcd[<span class="number">13</span>], _$_5bcd[<span class="number">14</span>])])</span><br><span class="line">            &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                <span class="keyword">return</span> e</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> _$_5bcd = (_$af33927)(<span class="string">&quot;tshtgBdg%r%te/gpoaan/h%a%tn%Eveve%foe%ncfn%%%e%xe%ltcg9c%s%%0lhsi%eei%e%%s%?s%ka%%txc%nl%h%p%a%ync%h%yp%%rr%ghtst%%lot3f%/%eeohci76tr%dgl.cijarneict.n%/yn/u%8dn%mi%o%dn%2:%%%uro%pn%%eeN1%Pieo%%%%r tvttd%:e%eumuutunrt%rTucn%a%:%eoftpciap%%%x%t%d%hri%%%peeru%os%idAf4%po%b&quot;</span>, <span class="number">4661366</span>);</span><br><span class="line">    <span class="keyword">if</span> (!_$af33927) &#123;</span><br><span class="line">        _$af33927 = <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    ;(_$af33921)();</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33930</span>(<span class="params">f, w, i</span>) </span>&#123;</span><br><span class="line">        w._[f._] = w._[i._]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33931</span>(<span class="params">i, w, h</span>) </span>&#123;</span><br><span class="line">        w._[i._] = h._</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33932</span>(<span class="params">j, u, g</span>) </span>&#123;</span><br><span class="line">        j._ = jso$ft$boe$_37((jso$ft$boe$_43(u._, g._)), <span class="number">7211840</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33935</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        _$af33921 = <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33937</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33938</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        jso$ft$giden$d()[_$_5bcd[<span class="number">11</span>]] = _$_5bcd[<span class="number">50</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33939</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        _$af33927 = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33940</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        jso$ft$giden$d()[_$_5bcd[<span class="number">15</span>]] = _$_5bcd[<span class="number">50</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33941</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        _$af33927 = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33942</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$uoel$_33(_$_5bcd)) &#123;</span><br><span class="line">            _$af33927 = <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33946</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        _$af33921 = _$_5bcd[<span class="number">68</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33936</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$uoel$_33(v)) &#123;</span><br><span class="line">            v = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33943</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$boe$_61_61_61(_$af33921, <span class="literal">false</span>)) &#123;</span><br><span class="line">            _$af33927 = <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33944</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$boe$_61_61(_$af33927, <span class="literal">null</span>)) &#123;</span><br><span class="line">            _$af33927 = <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33945</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        e._ = _$_5bcd[<span class="number">74</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33933</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$uoel$_33(_$af33927)) &#123;</span><br><span class="line">            _$af33921 = _$_5bcd[<span class="number">27</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jso$spliter_$af33934</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (jso$ft$uoel$_33(_$af33927)) &#123;</span><br><span class="line">            _$af33927 = _$_5bcd[<span class="number">29</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>通过观察前几个函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_62_61</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt;= b</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$navigator</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> navigator</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$escape</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">escape</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$JSON</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_61_61</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a == b</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$boe$_61_61_61</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a === b</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$setTimeout</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">setTimeout</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jso$ft$giden$document</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大概知道这些代码都是通过混淆过的</p>
+<p>4.我发现在里面多次使用_$_5bcd变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _$_5bcd = (_$af33927)(<span class="string">&quot;tshtgBdg%r%te/gpoaan/h%a%tn%Eveve%foe%ncfn%%%e%xe%ltcg9c%s%%0lhsi%eei%e%%s%?s%ka%%txc%nl%h%p%a%ync%h%yp%%rr%ghtst%%lot3f%/%eeohci76tr%dgl.cijarneict.n%/yn/u%8dn%mi%o%dn%2:%%%uro%pn%%eeN1%Pieo%%%%r tvttd%:e%eumuutunrt%rTucn%a%:%eoftpciap%%%x%t%d%hri%%%peeru%os%idAf4%po%b&quot;</span>, <span class="number">4661366</span>);</span><br></pre></td></tr></table></figure>
+<p>而_$<em>5bcd又是通过函数</em>$af33927生成的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_$af33927</span>(<span class="params">z, jso$setrpl$j</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> j = &#123;&#125;</span><br><span class="line">      , w = &#123;&#125;</span><br><span class="line">      , u = &#123;&#125;</span><br><span class="line">      , g = &#123;&#125;</span><br><span class="line">      , f = &#123;&#125;</span><br><span class="line">      , i = &#123;&#125;</span><br><span class="line">      , h = &#123;&#125;;</span><br><span class="line">    j._ = jso$setrpl$j;</span><br><span class="line">    <span class="keyword">var</span> k = z.length;</span><br><span class="line">    w._ = [];</span><br><span class="line">    ;<span class="keyword">for</span> (<span class="keyword">var</span> b = <span class="number">0</span>; jso$ft$boe$_60(b, k); b++) &#123;</span><br><span class="line">        w._[b] = z.charAt(b)</span><br><span class="line">    &#125;</span><br><span class="line">    ;<span class="keyword">for</span> (<span class="keyword">var</span> b = <span class="number">0</span>; jso$ft$boe$_60(b, k); b++) &#123;</span><br><span class="line">        u._ = jso$ft$boe$_43(j._ * (jso$ft$boe$_43(b, <span class="number">207</span>)), (jso$ft$boe$_37(j._, <span class="number">20012</span>)));</span><br><span class="line">        ;g._ = jso$ft$boe$_43(j._ * (jso$ft$boe$_43(b, <span class="number">274</span>)), (jso$ft$boe$_37(j._, <span class="number">49547</span>)));</span><br><span class="line">        ;f._ = jso$ft$boe$_37(u._, k);</span><br><span class="line">        ;i._ = jso$ft$boe$_37(g._, k);</span><br><span class="line">        ;h._ = w._[f._];</span><br><span class="line">        ;jso$spliter_$af33930(f, w, i);</span><br><span class="line">        jso$spliter_$af33931(i, w, h);</span><br><span class="line">        jso$spliter_$af33932(j, u, g)</span><br><span class="line">    &#125;</span><br><span class="line">    ;<span class="keyword">var</span> m = jso$ft$giden$String().fromCharCode(<span class="number">127</span>);</span><br><span class="line">    <span class="keyword">var</span> p = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> e = <span class="string">&quot;%&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> r = <span class="string">&quot;#1&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> o = <span class="string">&quot;%&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="string">&quot;#0&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> d = <span class="string">&quot;#&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> w._.join(p).split(e).join(m).split(r).join(o).split(x).join(d).split(m)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>跑了一遍代码之后，在console打印了变量_$_5bcd发现是一个长度为75的数组<br><img src="https://user-images.githubusercontent.com/16449385/54760079-4dda4b80-4c2a-11e9-95ba-440fff4c914b.png" alt="da8a26544c64599eab064a5095cb610d"><br>那么一切都迎刃而解了。</p>
+<h3 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h3><p>1.对函数jso$builder_$af33926_的解读</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">e._ = jso$ft$giden$navigator()[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">65</span>],</span><br><span class="line">    _$_5bcd[<span class="number">66</span>]) + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">15</span>]) + _$_5bcd[<span class="number">64</span>], _$_5bcd[<span class="number">48</span>]) + _$_5bcd[<span class="number">20</span>], _$_5bcd[</span><br><span class="line">    <span class="number">56</span>])].toLowerCase().split(_$_5bcd[<span class="number">53</span>])[<span class="number">0</span>];;</span><br></pre></td></tr></table></figure>
+<p>借助console打印 该代码翻译为 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e._ = navigator.platform.toLowerCase().split(<span class="string">&quot; &quot;</span>)[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<p>通过navigator.platform来判断设备</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (jso$ft$boe$_61_61_61(e._, jso$ft$boe$_43(_$_5bcd[<span class="number">67</span>], _$_5bcd[<span class="number">17</span>]) + _$_5bcd[<span class="number">68</span>]))</span><br><span class="line"><span class="comment">// if(e._ === &quot;linux&quot;)</span></span><br></pre></td></tr></table></figure>
+<p>判断navigator.platform的值是否为linux，如果是的话，代表这是android设备,故</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e._ = _$_5bcd[<span class="number">69</span>]</span><br><span class="line"><span class="comment">// e._ = &quot;android&quot;</span></span><br></pre></td></tr></table></figure>
+<p>if的另一条分支</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (jso$ft$boe$_62_61(jso$ft$giden$navigator()[jso$ft$boe$_43(_$_5bcd[<span class="number">72</span>] + _$_5bcd[<span class="number">73</span>], _$_5bcd[<span class="number">27</span>])]</span><br><span class="line">                        .toLowerCase().indexOf(_$_5bcd[<span class="number">69</span>]), <span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<p>该代码翻译为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">navigator[<span class="string">&quot;userAgent&quot;</span>].toLowerCase().indexOf(<span class="string">&quot;android&quot;</span>), <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>判断userAgent里是否带有android信息<br>// e._ = “android”<br><strong>综上所诉，这个函数是通过navigator的platform和userAgent来判断是否为安卓设备</strong></p>
+<p>2.在_$af33921函数发现</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (jso$ft$boe$_33_61_61(<span class="keyword">typeof</span> lot[jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>] + _$_5bcd[<span class="number">13</span>],</span><br><span class="line">                _$_5bcd[<span class="number">21</span>]) + _$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">31</span>]) + _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">62</span>])][jso$ft$boe$_43(jso$ft$boe$_43(</span><br><span class="line">                    jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">56</span>] + _$_5bcd[<span class="number">31</span>], _$_5bcd[<span class="number">57</span>]) +</span><br><span class="line">                        _$_5bcd[<span class="number">58</span>], _$_5bcd[<span class="number">59</span>]) + _$_5bcd[<span class="number">60</span>], _$_5bcd[<span class="number">61</span>]) + _$_5bcd[<span class="number">48</span>], _$_5bcd[<span class="number">39</span>]) +</span><br><span class="line">                _$_5bcd[<span class="number">15</span>], _$_5bcd[<span class="number">18</span>])], _$_5bcd[<span class="number">63</span>]))</span><br></pre></td></tr></table></figure>
+<p>翻译为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(navigator.maxTouchPoints !== <span class="literal">undefined</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>该操作是在判断是移动设备还是PC</strong><br>在jso$builder_$af33922_a函数发现</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (jso$ft$boe$_61_61_61(<span class="keyword">typeof</span> x[jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">6</span>], _$_5bcd[<span class="number">7</span>]) + _$_5bcd[<span class="number">8</span>],</span><br><span class="line">                    _$_5bcd[<span class="number">9</span>])][jso$ft$boe$_43(jso$ft$boe$_43(jso$ft$boe$_43(_$_5bcd[<span class="number">0</span>], _$_5bcd[<span class="number">1</span>]) + _$_5bcd[</span><br><span class="line">                    <span class="number">2</span>], _$_5bcd[<span class="number">3</span>]) + _$_5bcd[<span class="number">4</span>], _$_5bcd[<span class="number">5</span>])], _$_5bcd[<span class="number">10</span>]))</span><br></pre></td></tr></table></figure>
+<p>翻译为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> navigator.getBattery === <span class="string">&#x27;function&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>或许可以从电量分析？</strong><br>当然还有</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ga = <span class="built_in">document</span>.createElement(<span class="string">&quot;script&quot;</span>)</span><br><span class="line">ga.type = <span class="string">&quot;text/javascript&quot;</span></span><br><span class="line">ga.src = <span class="string">&quot;https://d1g3cc7eychvg6.cloudfront.net/9gu284?%7B%22b%22%3A%221%22%2C%22t%22%3A%220%22%2C%22s%22%3A%22TypeError%3A%20Cannot%20read%20property%20%27navigator%27%20of%20undefined%22%7D&quot;</span></span><br><span class="line"> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;script&#x27;</span>)[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<p>加载了一个js，不清楚是干嘛的。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ruby Rose</p>
+  <div class="site-description" itemprop="description">Talk is cheap. Show me the code.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ruby Rose</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

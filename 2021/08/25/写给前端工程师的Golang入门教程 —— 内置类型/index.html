@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"noodanee.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="JavaScript是一门弱类型的语言，对于数据类型定义比较宽泛，Golang是一门强类型的语言，对于的类型定义比较细致。 基本类型   类型 长度 说明    bool 1 对应JavaScript的Boolean   string  对应JavaScript的String   (u)int 4&#x2F;8 32或64位   (u)int8 1 -128 ~ 127, 0 ~ 255   (u)int1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写给前端工程师的Golang入门教程 —— 内置类型">
+<meta property="og:url" content="https://noodanee.com/2021/08/25/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Ruby Rose">
+<meta property="og:description" content="JavaScript是一门弱类型的语言，对于数据类型定义比较宽泛，Golang是一门强类型的语言，对于的类型定义比较细致。 基本类型   类型 长度 说明    bool 1 对应JavaScript的Boolean   string  对应JavaScript的String   (u)int 4&#x2F;8 32或64位   (u)int8 1 -128 ~ 127, 0 ~ 255   (u)int1">
+<meta property="og:locale">
+<meta property="og:image" content="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg">
+<meta property="article:published_time" content="2021-08-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-25T11:10:20.719Z">
+<meta property="article:author" content="Ruby Rose">
+<meta property="article:tag" content="Golang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg">
+
+<link rel="canonical" href="https://noodanee.com/2021/08/25/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>写给前端工程师的Golang入门教程 —— 内置类型 | Ruby Rose</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ruby Rose</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Talk is cheap. Show me the code.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://noodanee.com/2021/08/25/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruby Rose">
+      <meta itemprop="description" content="Talk is cheap. Show me the code.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruby Rose">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          写给前端工程师的Golang入门教程 —— 内置类型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-08-25 00:00:00 / Modified: 11:10:20" itemprop="dateCreated datePublished" datetime="2021-08-25T00:00:00+00:00">2021-08-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><code>JavaScript</code>是一门弱类型的语言，对于数据类型定义比较宽泛，<code>Golang</code>是一门强类型的语言，对于的类型定义比较细致。</p>
+<h3 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>长度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bool</code></td>
+<td>1</td>
+<td>对应JavaScript的Boolean</td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td></td>
+<td>对应JavaScript的String</td>
+</tr>
+<tr>
+<td><code>(u)int</code></td>
+<td>4/8</td>
+<td>32或64位</td>
+</tr>
+<tr>
+<td><code>(u)int8</code></td>
+<td>1</td>
+<td>-128 ~ 127, 0 ~ 255</td>
+</tr>
+<tr>
+<td><code>(u)int16</code></td>
+<td>2</td>
+<td>-32768 ~ 32767, 0 ~ 65535</td>
+</tr>
+<tr>
+<td><code>(u)int32</code></td>
+<td>4</td>
+<td>-2147483648 ~ 2147483647, 0 ~ 4294967295</td>
+</tr>
+<tr>
+<td><code>(u)int64</code></td>
+<td>8</td>
+<td>-9223372036854775808 ~ 9223372036854775807, 0 ~ 18446744073709551615</td>
+</tr>
+<tr>
+<td><code>uintptr</code></td>
+<td>4/8</td>
+<td>存储指针的uint32或uint64整数</td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>1</td>
+<td>uint8的别名</td>
+</tr>
+<tr>
+<td><code>rune</code></td>
+<td>4</td>
+<td>int32的别名, Unicode码点</td>
+</tr>
+<tr>
+<td><code>float32</code></td>
+<td>4</td>
+<td>符合IEEE-754标准的32位浮点数</td>
+</tr>
+<tr>
+<td><code>float64</code></td>
+<td>8</td>
+<td>符合IEEE-754标准的64位浮点数</td>
+</tr>
+<tr>
+<td><code>complex64</code></td>
+<td>8</td>
+<td>具有float32实部和虚部的所有复数的集合</td>
+</tr>
+<tr>
+<td><code>complex128</code></td>
+<td>16</td>
+<td>具有float64实部和虚部的所有复数的集合</td>
+</tr>
+</tbody></table>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p><code>JavaScript</code>的数组声明不用关注元素类型和数组长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p><code>Golang</code>要求声明元素类型和数组长度</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">3</span>]<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Golang</code>数组长度是声明在类型前面的，并且也可以让编译器计算</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [...]<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p><code>Golang</code>的数组声明需要事先定义数组长度，看起来不像<code>JavaScript</code>中的数组那么好用，实际上与<code>JavaScript</code>中的数组对等的应该是<code>Golang</code>的切片。</p>
+<p>数组是值类型，切片是在数组上面的一个‘View’，它指向一个数组的一段连续的内存。</p>
+<p>初始化一个切片也很简单，直接去掉数组长度的声明就是切片</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = []<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在切片元素不确定的情况下，我们还可以使用<code>make</code>初始化一个切片</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">3</span>)</span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">3</span>, <span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>初始化一个长度为3的切片a；初始化一个长度为3，数组的容量为6的b。</p>
+</blockquote>
+<p><code>Golang</code>提供了一些方法操作切片</p>
+<p><code>len()</code>可以查看切片的长度<br><code>cap()</code>可以查看切片指向的数组的长度</p>
+<blockquote>
+<p>相当于<code>JavaScript</code>中的<code>Array.prototype.length</code>属性</p>
+</blockquote>
+<p><code>append()</code>可以追加元素到切片中，并且有扩容指向的数组的能力</p>
+<blockquote>
+<p>相当于<code>JavaScript</code>中的<code>push()</code></p>
+</blockquote>
+<p>还可以使用<code>[low:high]</code>切片操作</p>
+<blockquote>
+<p>相当于<code>JavaScript</code>中的<code>Array.prototype.slice()</code>方法</p>
+</blockquote>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p>Map是一种无序的Key-Value数据结构，相当于<code>JavaScript</code>中的<code>Map</code></p>
+<p>初始化Map需要声明类型</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span> &#123;</span><br><span class="line">  <span class="string">&quot;foo&quot;</span>: <span class="string">&quot;Hello&quot;</span>,</span><br><span class="line">  <span class="string">&quot;bar&quot;</span>: <span class="string">&quot;World&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用<code>make</code></p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>delete()</code>删除<code>key</code></p>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>结构体可以看作是<code>JavaScript</code>中的<code>Object</code>，不过需要事先定义字段。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">  name <span class="keyword">string</span></span><br><span class="line">  age <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = Person&#123;name: <span class="string">&quot;allen&quot;</span>, age: <span class="number">30</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = Person&#123;<span class="string">&quot;allen&quot;</span>, <span class="number">30</span>&#125;</span><br><span class="line"><span class="keyword">var</span> c = <span class="built_in">new</span>(Person)</span><br><span class="line">c.name = <span class="string">&quot;allen&quot;</span></span><br><span class="line">c.age = <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<p><code>new()</code>是<code>Golang</code>的一个内置函数，它会根据传入的类型分配一片内存空间并返回指向这片内存空间的指针。</p>
+<p>欢迎关注我的公众号“<strong>野生程序员的修炼</strong>”，原创技术文章第一时间推送。</p>
+<center>
+    <img src="https://gitee.com/noodanee/resource/raw/master/2021/08/13/1628787241618-a4cdaa95-d14e-4422-8851-f616c8f18f04.jpg" style="width: 100px;">
+</center>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Golang/" rel="tag"># Golang</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/21/%E5%86%99%E7%BB%99%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84Golang%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%20%E2%80%94%E2%80%94%20%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" rel="prev" title="写给前端工程师的Golang入门教程 —— 基本语法">
+      <i class="fa fa-chevron-left"></i> 写给前端工程师的Golang入门教程 —— 基本语法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">基本类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%87%E7%89%87"><span class="nav-number">3.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">4.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">5.</span> <span class="nav-text">结构体</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ruby Rose</p>
+  <div class="site-description" itemprop="description">Talk is cheap. Show me the code.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ruby Rose</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
